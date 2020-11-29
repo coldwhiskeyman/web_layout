@@ -7,6 +7,12 @@ body {
 	min-width: 320px;
 }
 
+:root {
+    --light-purple:#c283f3;
+    --purple: #9d5cd0;
+    --dark-purple: #7943A4;
+}
+
 *,
 *::before,
 *::after {
@@ -35,16 +41,38 @@ ul {
 
 a {
 	text-decoration: none;
-	color: inherit;
+    color: inherit;
+    outline: none;
+}
+
+a:hover {
+    cursor: default;
+}
+
+input,
+button {
+    outline: none;
+}
+
+a:focus, /* не работает */
+button:focus,
+input:focus {
+    box-shadow: var(--dark-purple);
+}
+
+a:hover,
+button:hover {
+    color: var(--light-purple);
+}
+
+a:active,
+button:active {
+    color: var(--dark-purple);
 }
 
 img, picture {
 	max-width: 100%;
 	height: auto;
-}
-
-button:hover {
-	cursor: pointer;
 }
 
 .container {
@@ -56,7 +84,7 @@ button:hover {
 
 .upper-header {
     background-color: black;
-    padding: 12px 0;
+    padding: 12px 0 11px;
 }
 
 header .container {
@@ -79,7 +107,7 @@ header .container {
 }
 
 .burger {
-    width: 20px;
+    width: 16px;
     height: 15px;
     padding-top: 6px;
 }
@@ -134,7 +162,7 @@ header .container {
     }
 
     .burger {
-        width: 36px;
+        width: 30px;
         height: 28px;
         padding-top: 12px;
     }
@@ -167,6 +195,11 @@ header .container {
 }
 
 @media(min-width: 1650px) {
+    button:hover,
+    a:hover {
+        cursor: pointer;
+    }
+
     .container {
         width: 1600px;
         margin: 0 auto;
@@ -175,13 +208,22 @@ header .container {
 
     /* header */
 
+    header {
+        font-size: 18px;
+        color: white;
+    }
+
     header .container {
         justify-content: start;
     }
 
+    .upper-header {
+        padding: 29px 0 31px;
+    }
+
     .lower-header {
         display: block;
-        padding: 23px 0;
+        padding: 22px 0 23px;
         background: rgba(0, 0, 0, 0.4);
     }
 
@@ -191,7 +233,8 @@ header .container {
     }
 
     .logo {
-        margin-right: 173px;
+        width: 223px;
+        margin-right: 180px;
     }
 
     .header-nav {
@@ -199,15 +242,24 @@ header .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: 18px;
     }
 
     .login {
         padding-left: 20px;
-        color: white;
         background-image: url('../img/login_icon.svg');
         background-repeat: no-repeat;
         background-position: left;
+    }
+
+    .login:hover {
+        padding-left: 24px;
+        background-image: url('../img/login_icon_light_purple.svg');
+    }
+
+
+    .login:active {
+        color: var(--purple);
+        background-image: url('../img/login_icon_purple.svg');
     }
 
     .menu-list,
@@ -218,22 +270,74 @@ header .container {
 
     .menu-list__item {
         font-weight: 600;
-        color: white;
     }
 
     .menu-list__item:not(:last-child) {
         margin-right: 62px;
     }
 
+    .lower-header .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
     .styles-list__item {
-        color: white;
-        padding-right: 11px;
+        padding-right: 15px;
         background-image: url('../img/arrow_down.svg');
         background-repeat: no-repeat;
         background-position: right;
     }
 
     .styles-list__item:not(:last-child) {
-        margin-right: 97px;
+        margin-right: 98px;
+    }
+
+    .styles-list__item:hover {
+        color: var(--purple); /* не работает */
+        background-image: url(../img/arrow_down_purple.svg);
+    }
+
+    .styles-list__item:active {
+        background-image: url(../img/arrow_up_dark_purple.svg);
+        background-position: right bottom;
+    }
+
+    .search-form {
+        display: flex;
+    }
+
+    .search-form__btn {
+        width: 22px;
+        height: 22px;
+        margin-right: 11px;
+        align-self: flex-end;
+        border: none;
+        background-color: transparent;
+        background-image: url('../img/search.svg');
+        background-size: contain;
+        background-position: bottom;
+    }
+
+    .search-form__input {
+        width: 218px;
+        padding-left: 0;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        border: none;
+        border-bottom: 1px solid white;
+        background-color: transparent;
+        caret-color: var(--light-purple);
+    }
+
+    .search-form__input::placeholder {
+        color: white;
+    }
+
+    .search-form:hover .search-form__input {
+        border-bottom: 1px solid var(--light-purple);
+    }
+
+    .search-form:hover .search-form__btn {
+        background-image: url('../img/search_light_purple.svg');
     }
 }

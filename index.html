@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blanchard</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-600.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
     <header>
@@ -18,13 +22,13 @@
                 <img class="search" src="img/search.svg" alt="Поиск по сайту">
                 <nav class="header-nav">
                     <ul class="menu-list">
-                        <li class="menu-list__item">О нас</li>
-                        <li class="menu-list__item">Галерея</li>
-                        <li class="menu-list__item">Каталог</li>
-                        <li class="menu-list__item">События</li>
-                        <li class="menu-list__item">Издания</li>
-                        <li class="menu-list__item">Проекты</li>
-                        <li class="menu-list__item">Контакты</li>
+                        <li class="menu-list__item"><a href="#">О нас</a></li>
+                        <li class="menu-list__item"><a href="#">Галерея</a></li>
+                        <li class="menu-list__item"><a href="#">Каталог</a></li>
+                        <li class="menu-list__item"><a href="#">События</a></li>
+                        <li class="menu-list__item"><a href="#">Издания</a></li>
+                        <li class="menu-list__item"><a href="#">Проекты</a></li>
+                        <li class="menu-list__item"><a href="#">Контакты</a></li>
                     </ul>
                     <a class="login" href="#">Войти</a>
                 </nav>
@@ -33,12 +37,16 @@
         <div class="lower-header">
             <div class="container">
                 <ul class="styles-list">
-                    <li class="styles-list__item">Реализм</li>
-                    <li class="styles-list__item">Импрессионизм</li>
-                    <li class="styles-list__item">Постимпрессионизм</li>
-                    <li class="styles-list__item">Авангард</li>
-                    <li class="styles-list__item">Футуризм</li>
+                    <li class="styles-list__item"><a href="#">Реализм</a></li>
+                    <li class="styles-list__item"><a href="#">Импрессионизм</a></li>
+                    <li class="styles-list__item"><a href="#">Постимпрессионизм</a></li>
+                    <li class="styles-list__item"><a href="#">Авангард</a></li>
+                    <li class="styles-list__item"><a href="#">Футуризм</a></li>
                 </ul>
+                <form class="search-form">
+                    <button class="search-form__btn" type="submit" aria-label="Поиск по сайту"></button>
+                    <input class="search-form__input" type="search" placeholder="Поиск по сайту">
+                </form>
             </div>
         </div>
     </header>
