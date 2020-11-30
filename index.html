@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="html" lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,44 +11,57 @@
 	<link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-600.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
 </head>
-<body>
-    <header>
-        <div class="upper-header">
-            <div class="container">
-                <div class="burger">
-                    <span></span>
-                </div>
-                <img class="logo" src="img/logo.svg" alt="Blanchard. Художественная галерея">
-                <img class="search" src="img/search.svg" alt="Поиск по сайту">
-                <nav class="header-nav">
-                    <ul class="menu-list">
-                        <li class="menu-list__item"><a href="#">О нас</a></li>
-                        <li class="menu-list__item"><a href="#">Галерея</a></li>
-                        <li class="menu-list__item"><a href="#">Каталог</a></li>
-                        <li class="menu-list__item"><a href="#">События</a></li>
-                        <li class="menu-list__item"><a href="#">Издания</a></li>
-                        <li class="menu-list__item"><a href="#">Проекты</a></li>
-                        <li class="menu-list__item"><a href="#">Контакты</a></li>
-                    </ul>
-                    <a class="login" href="#">Войти</a>
-                </nav>
-            </div>
-        </div>
-        <div class="lower-header">
-            <div class="container">
-                <ul class="styles-list">
-                    <li class="styles-list__item"><a href="#">Реализм</a></li>
-                    <li class="styles-list__item"><a href="#">Импрессионизм</a></li>
-                    <li class="styles-list__item"><a href="#">Постимпрессионизм</a></li>
-                    <li class="styles-list__item"><a href="#">Авангард</a></li>
-                    <li class="styles-list__item"><a href="#">Футуризм</a></li>
-                </ul>
-                <form class="search-form">
-                    <button class="search-form__btn" type="submit" aria-label="Поиск по сайту"></button>
-                    <input class="search-form__input" type="search" placeholder="Поиск по сайту">
-                </form>
-            </div>
-        </div>
-    </header>
+<body class="body">
+	<header class="header">
+		<div class="upper-header">
+			<div class="container">
+				<button class="burger button-reset" aria-label="Открыть меню">
+					<span class="burger__element"></span>
+				</button>
+				<img class="logo img-reset" src="img/logo.svg" alt="Blanchard. Художественная галерея">
+				<button class="search button-reset" aria-label="Поиск по сайту"></button>
+				<nav class="header-nav">
+					<ul class="menu-list ul-reset">
+						<li class="menu-list__item"><a class="menu-list__link a-reset selectable" href="#">О нас</a></li>
+						<li class="menu-list__item"><a class="menu-list__link a-reset selectable" href="#">Галерея</a></li>
+						<li class="menu-list__item"><a class="menu-list__link a-reset selectable" href="#">Каталог</a></li>
+						<li class="menu-list__item"><a class="menu-list__link a-reset selectable" href="#">События</a></li>
+						<li class="menu-list__item"><a class="menu-list__link a-reset selectable" href="#">Издания</a></li>
+						<li class="menu-list__item"><a class="menu-list__link a-reset selectable" href="#">Проекты</a></li>
+						<li class="menu-list__item"><a class="menu-list__link a-reset selectable" href="#">Контакты</a></li>
+					</ul>
+					<button class="login button-reset selectable">Войти</button>
+				</nav>
+			</div>
+		</div>
+		<nav class="mobile-nav container closed">
+			<ul class="mobile-menu-list ul-reset">
+				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link a-reset" href="#">О нас</a></li>
+				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link a-reset" href="#">Галерея</a></li>
+				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link a-reset" href="#">Каталог</a></li>
+				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link a-reset" href="#">События</a></li>
+				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link a-reset" href="#">Издания</a></li>
+				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link a-reset" href="#">Проекты</a></li>
+				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link a-reset" href="#">Контакты</a></li>
+			</ul>
+		</nav>
+		<div class="lower-header">
+			<div class="container">
+				<ul class="styles-list ul-reset">
+					<li class="styles-list__item"><a class="styles-list__link a-reset selectable" href="#">Реализм</a></li>
+					<li class="styles-list__item"><a class="styles-list__link a-reset selectable" href="#">Импрессионизм</a></li>
+					<li class="styles-list__item"><a class="styles-list__link a-reset selectable" href="#">Постимпрессионизм</a></li>
+					<li class="styles-list__item"><a class="styles-list__link a-reset selectable" href="#">Авангард</a></li>
+					<li class="styles-list__item"><a class="styles-list__link a-reset selectable" href="#">Футуризм</a></li>
+				</ul>
+				<form class="search-form">
+					<button class="search-form__btn button-reset" type="submit" aria-label="Поиск по сайту"></button>
+					<input class="search-form__input input-reset" type="search" placeholder="Поиск по сайту">
+				</form>
+			</div>
+		</div>
+	</header>
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>
