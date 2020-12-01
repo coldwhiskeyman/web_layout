@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html class="html" lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blanchard</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blanchard</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+	<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-600.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
 </head>
@@ -15,48 +17,68 @@
 	<header class="header">
 		<div class="upper-header">
 			<div class="container">
-				<button class="burger button-reset" aria-label="Открыть меню">
+				<button class="burger link-reset" aria-label="Открыть меню">
 					<span class="burger__element"></span>
 				</button>
 				<img class="logo img-reset" src="img/logo.svg" alt="Blanchard. Художественная галерея">
 				<button class="search button-reset" aria-label="Поиск по сайту"></button>
 				<nav class="header-nav">
 					<ul class="menu-list ul-reset">
-						<li class="menu-list__item"><a class="menu-list__link a-reset selectable" href="#">О нас</a></li>
-						<li class="menu-list__item"><a class="menu-list__link a-reset selectable" href="#">Галерея</a></li>
-						<li class="menu-list__item"><a class="menu-list__link a-reset selectable" href="#">Каталог</a></li>
-						<li class="menu-list__item"><a class="menu-list__link a-reset selectable" href="#">События</a></li>
-						<li class="menu-list__item"><a class="menu-list__link a-reset selectable" href="#">Издания</a></li>
-						<li class="menu-list__item"><a class="menu-list__link a-reset selectable" href="#">Проекты</a></li>
-						<li class="menu-list__item"><a class="menu-list__link a-reset selectable" href="#">Контакты</a></li>
+						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#">О нас</a></li>
+						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#">Галерея</a></li>
+						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#">Каталог</a></li>
+						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#">События</a></li>
+						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#">Издания</a></li>
+						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#">Проекты</a></li>
+						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#">Контакты</a></li>
 					</ul>
-					<button class="login button-reset selectable">Войти</button>
+					<button class="login link-reset selectable">Войти</button>
 				</nav>
 			</div>
 		</div>
 		<nav class="mobile-nav container closed">
 			<ul class="mobile-menu-list ul-reset">
-				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link a-reset" href="#">О нас</a></li>
-				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link a-reset" href="#">Галерея</a></li>
-				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link a-reset" href="#">Каталог</a></li>
-				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link a-reset" href="#">События</a></li>
-				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link a-reset" href="#">Издания</a></li>
-				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link a-reset" href="#">Проекты</a></li>
-				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link a-reset" href="#">Контакты</a></li>
+				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link link-reset" href="#">О нас</a></li>
+				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link link-reset" href="#">Галерея</a></li>
+				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link link-reset" href="#">Каталог</a></li>
+				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link link-reset" href="#">События</a></li>
+				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link link-reset" href="#">Издания</a></li>
+				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link link-reset" href="#">Проекты</a></li>
+				<li class="mobile-menu-list__item"><a class="mobile-menu-list__link link-reset" href="#">Контакты</a></li>
 			</ul>
 		</nav>
 		<div class="lower-header">
 			<div class="container">
 				<ul class="styles-list ul-reset">
-					<li class="styles-list__item"><a class="styles-list__link a-reset selectable" href="#">Реализм</a></li>
-					<li class="styles-list__item"><a class="styles-list__link a-reset selectable" href="#">Импрессионизм</a></li>
-					<li class="styles-list__item"><a class="styles-list__link a-reset selectable" href="#">Постимпрессионизм</a></li>
-					<li class="styles-list__item"><a class="styles-list__link a-reset selectable" href="#">Авангард</a></li>
-					<li class="styles-list__item"><a class="styles-list__link a-reset selectable" href="#">Футуризм</a></li>
+					<li class="styles-list__item">
+						<a class="styles-list__link link-reset selectable" href="#">Реализм</a>
+						<div class="artist-dropdown closed">
+							<ul class="artist-dropdown__list ul-reset scroll-block" data-simplebar>
+								<li class="artist-dropdown__item">Мане</li>
+								<li class="artist-dropdown__item">Дега</li>
+								<li class="artist-dropdown__item">Репин</li>
+								<li class="artist-dropdown__item">Брюллов</li>
+								<li class="artist-dropdown__item">Перов</li>
+								<li class="artist-dropdown__item">Курбе</li>
+							</ul>
+						</div>
+					</li>
+					<li class="styles-list__item">
+						<a class="styles-list__link link-reset selectable" href="#">Импрессионизм</a>
+					</li>
+					<li class="styles-list__item">
+						<a class="styles-list__link link-reset selectable" href="#">Постимпрессионизм</a>
+					</li>
+					<li class="styles-list__item">
+						<a class="styles-list__link link-reset selectable" href="#">Авангард</a>
+					</li>
+					<li class="styles-list__item">
+						<a class="styles-list__link link-reset selectable" href="#">Футуризм</a>
+					</li>
 				</ul>
 				<form class="search-form">
-					<button class="search-form__btn button-reset" type="submit" aria-label="Поиск по сайту"></button>
-					<input class="search-form__input input-reset" type="search" placeholder="Поиск по сайту">
+					<button class="search-form__btn link-reset" type="submit" aria-label="Поиск по сайту"></button>
+					<input class="search-form__input link-reset" type="search" placeholder="Поиск по сайту">
 				</form>
 			</div>
 		</div>
