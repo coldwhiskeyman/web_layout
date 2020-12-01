@@ -115,7 +115,8 @@
 .burger {
 	width: 16px;
 	height: 15px;
-	padding-top: 6px;
+	position: relative;
+	padding: 0;
 	border: none;
 	background-color: transparent;
 }
@@ -130,12 +131,13 @@
 }
 
 .burger__element {
+	top: 5px;
 	width: 16px;
 }
 
 .burger__element::before {
 	content: "";
-	top: -7px;
+	top: -6px;
 	width: 20px;
 }
 
@@ -188,7 +190,6 @@
 	.burger {
 		width: 30px;
 		height: 28px;
-		padding-top: 12px;
 	}
 
 	.burger__element,
@@ -198,6 +199,7 @@
 	}
 
 	.burger__element {
+		top: 13px;
 		width: 28px;
 	}
 
@@ -252,7 +254,7 @@
 
 	.lower-header {
 		display: block;
-		padding: 22px 0 23px;
+		padding: 16px 0;
 		background: rgba(0, 0, 0, 0.4);
 	}
 
@@ -263,7 +265,7 @@
 
 	.logo {
 		width: 223px;
-		margin-right: 180px;
+		margin-right: 175px;
 	}
 
 	.header-nav {
@@ -279,6 +281,7 @@
 
 	.login {
 		padding-left: 20px;
+		margin-right: -7px;
 		border: none;
 		background-color: transparent;
 		background-image: url('../img/login_icon.svg');
@@ -309,7 +312,7 @@
 	}
 
 	.menu-list__item:not(:last-child) {
-		margin-right: 62px;
+		margin-right: 54px;
 	}
 
 	.menu-list__link {
@@ -322,24 +325,27 @@
 		justify-content: space-between;
 	}
 
+	.styles-list {
+		margin-left: -4px;
+	}
+
 	.styles-list__item {
 		position: relative;
-		padding-right: 15px;
 	}
 
 	.styles-list__item:not(:last-child) {
-		margin-right: 98px;
+		margin-right: 89px;
 	}
 
 	.styles-list__link {
-		padding-right: 18px;
+		padding: 1px 20px 1px 4px;
 	}
 
 	.styles-list__link::after {
 		content: "";
 		position: absolute;
 		top: 7px;
-		right: 18px;
+		right: 7px;
 		width: 7px;
 		height: 7px;
 		border-bottom: 1px solid var(--white);
@@ -368,6 +374,8 @@
 
 	.search-form {
 		display: flex;
+		margin-right: -6px;
+		padding: 6px;
 	}
 
 	.search-form__btn {
