@@ -56,6 +56,10 @@
 	box-shadow: 0 0 0 2px var(--dark-purple);
 }
 
+.selectable:focus:not(.focus-visible) {
+	box-shadow: none;
+}
+
 .selectable:hover {
 	color: var(--light-purple);
 }
