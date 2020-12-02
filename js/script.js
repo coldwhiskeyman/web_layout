@@ -17,13 +17,20 @@ $(function() {
 		$('.mobile-nav').toggleClass('closed')
 	});
 
-	$('.styles-list__item').on('click', function(event) {
-		selfDropdown = $(this).find('.artist-dropdown')
+	let openedDropdown;
 
-		if (selfDropdown.hasClass('closed')) {
-			showModal(selfDropdown);
+	$('.styles-list__item').on('click', function(event) {
+		dropdown = $(this).find('.artist-dropdown')
+
+		if (dropdown.hasClass('closed')) {
+			if (openedDropdown) {
+				hideModal(openedDropdown);
+			};
+			showModal(dropdown);
+			openedDropdown = dropdown;
 		} else {
-			hideModal(selfDropdown)
+			hideModal(dropdown);
+			openedDropdown = null;
 		};
 		$(this).find('.styles-list__link::after').animate({transform: '+=rotate(-180deg)'}); // не работает
 	});
