@@ -6,10 +6,12 @@
 	<title>Blanchard</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-600.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body class="body">
 	<header class="header">
@@ -34,18 +36,6 @@
 				</nav>
 			</div>
 		</div>
-		<nav class="mobile-nav closed">
-			<div class="container">
-				<ul class="mobile-menu-list ul-reset">
-					<li class="mobile-menu-list__item"><a class="mobile-menu-list__link link-reset" href="#">О нас</a></li>
-					<li class="mobile-menu-list__item"><a class="mobile-menu-list__link link-reset" href="#">Галерея</a></li>
-					<li class="mobile-menu-list__item"><a class="mobile-menu-list__link link-reset" href="#">Каталог</a></li>
-					<li class="mobile-menu-list__item"><a class="mobile-menu-list__link link-reset" href="#">События</a></li>
-					<li class="mobile-menu-list__item"><a class="mobile-menu-list__link link-reset" href="#">Издания</a></li>
-					<li class="mobile-menu-list__item"><a class="mobile-menu-list__link link-reset" href="#">Проекты</a></li>
-					<li class="mobile-menu-list__item"><a class="mobile-menu-list__link link-reset" href="#">Контакты</a></li>
-				</ul>
-			</div>
 
 		</nav>
 		<div class="lower-header">
@@ -94,10 +84,30 @@
 
 	<main>
 		<section class="info">
-			<div class="container">
-				<h1 class="tagline text-block-reset">Прикоснитесь к&nbsp;прекрасному</h1>
-				<p class="subtext text-block-reset">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
-				<button class="subscribe-btn link-reset">Подписаться на рассылку</button>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide swiper-slide_1">
+						<div class="swiper-slide__container">
+							<h2 class="tagline text-block-reset">Прикоснитесь к&nbsp;прекрасному</h2>
+							<p class="subtext text-block-reset">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+							<button class="subscribe-btn link-reset">Подписаться на рассылку</button>
+						</div>
+					</div>
+					<div class="swiper-slide swiper-slide_2">
+						<div class="swiper-slide__container">
+							<h2 class="tagline text-block-reset">Прикоснитесь к&nbsp;прекрасному</h2>
+							<p class="subtext text-block-reset">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+							<button class="subscribe-btn link-reset">Подписаться на рассылку</button>
+						</div>
+					</div>
+					<div class="swiper-slide swiper-slide_3">
+						<div class="swiper-slide__container">
+							<h2 class="tagline text-block-reset">Прикоснитесь к&nbsp;прекрасному</h2>
+							<p class="subtext text-block-reset">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+							<button class="subscribe-btn link-reset">Подписаться на рассылку</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 	</main>
