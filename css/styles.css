@@ -8,6 +8,8 @@
 	--purple: #9d5cd0;
 	--dark-purple: #7943A4;
 	--white: #fff;
+	--black: #000;
+	--dark-grey: #333;
 }
 
 *,
@@ -73,10 +75,19 @@
 	padding: 0 15px;
 }
 
+.heading {
+	font-size: 28px;
+	font-weight: 400;
+}
+
+.article {
+	line-height: 2em;
+}
+
 /* header */
 
 .upper-header {
-	background-color: #000;
+	background-color: var(--black);
 	padding: 12px 0 11px;
 }
 
@@ -211,7 +222,7 @@
 }
 
 .subscribe-btn {
-	min-width: 200px;
+	min-width: 170px;
 	padding: 14px;
 	border: none;
 	border-radius: 20px;
@@ -225,9 +236,29 @@
 	background-color: var(--dark-purple);
 }
 
+/* about */
+
+.about {
+	padding-top: 53px;
+	padding-bottom: 50px;
+	color: var(--dark-grey);
+}
+
+.about .heading {
+	margin-bottom: 16px;
+}
+
+.about .article {
+	font-size: 14px;
+}
+
 @media(min-width: 768px) {
 	.container {
 		padding: 0 50px;
+	}
+
+	.heading {
+		font-size: 48px;
 	}
 
 	/* header */
@@ -295,7 +326,7 @@
 
 	.swiper-slide {
 		padding-top: 112px;
-		padding-bottom: 115px;
+		padding-bottom: 113px;
 	}
 
 	.swiper-slide_1 {
@@ -325,7 +356,7 @@
 	}
 
 	.subscribe-btn {
-		min-width: 315px;
+		min-width: 262px;
 		margin-left: 50px;
 		padding: 26px;
 		border: none;
@@ -337,9 +368,31 @@
 		box-shadow: 0 0 0 3px var(--light-purple) inset;
 		background-color: var(--dark-purple);
 	}
+
+	/* about */
+
+	.about {
+		padding-top: 85px;
+	}
+
+	.about .heading {
+		margin-bottom: 20px;
+	}
+
+	.about .article {
+		font-size: 16px;
+		margin-left: 2px;
+	}
 }
 
 @media(min-width: 1024px) {
+
+	/* about */
+
+	.about .heading,
+	.about .article {
+		margin-left: -2px;
+	}
 
 }
 
@@ -517,7 +570,7 @@
 	}
 
 	.artist-dropdown__list::-webkit-scrollbar-track {
-		background-color: #000;
+		background-color: var(--black);
 	}
 
 	.artist-dropdown__list::-webkit-scrollbar-thumb {
@@ -592,6 +645,57 @@
 
 	.styles-list__item:nth-child(2) .artist-dropdown__item:nth-child(4) {
 		background-image: url(../img/paintings-dropdown/impressionism/renoir.jpg);
+	}
+
+
+	.styles-list__item:nth-child(3) .artist-dropdown__item:nth-child(1) {
+		background-image: url(../img/paintings-dropdown/postimpressionism/cezanne.jpg);
+	}
+
+	.styles-list__item:nth-child(3) .artist-dropdown__item:nth-child(2) {
+		background-image: url(../img/paintings-dropdown/postimpressionism/gauguin.jpg);
+	}
+
+	.styles-list__item:nth-child(3) .artist-dropdown__item:nth-child(3) {
+		background-image: url(../img/paintings-dropdown/postimpressionism/matisse.jpg);
+	}
+
+	.styles-list__item:nth-child(3) .artist-dropdown__item:nth-child(4) {
+		background-image: url(../img/paintings-dropdown/postimpressionism/van-gogh.jpg);
+	}
+
+
+	.styles-list__item:nth-child(4) .artist-dropdown__item:nth-child(1) {
+		background-image: url(../img/paintings-dropdown/avantgarde/kandinsky.jpg);
+	}
+
+	.styles-list__item:nth-child(4) .artist-dropdown__item:nth-child(2) {
+		background-image: url(../img/paintings-dropdown/avantgarde/larionov.jpg);
+	}
+
+	.styles-list__item:nth-child(4) .artist-dropdown__item:nth-child(3) {
+		background-image: url(../img/paintings-dropdown/avantgarde/malevich.jpg);
+	}
+
+	.styles-list__item:nth-child(4) .artist-dropdown__item:nth-child(4) {
+		background-image: url(../img/paintings-dropdown/avantgarde/pirosmani.jpg);
+	}
+
+
+	.styles-list__item:nth-child(5) .artist-dropdown__item:nth-child(1) {
+		background-image: url(../img/paintings-dropdown/futurism/boccioni.jpg);
+	}
+
+	.styles-list__item:nth-child(5) .artist-dropdown__item:nth-child(2) {
+		background-image: url(../img/paintings-dropdown/futurism/carra.jpg);
+	}
+
+	.styles-list__item:nth-child(5) .artist-dropdown__item:nth-child(3) {
+		background-image: url(../img/paintings-dropdown/futurism/giacomo.jpg);
+	}
+
+	.styles-list__item:nth-child(5) .artist-dropdown__item:nth-child(4) {
+		background-image: url(../img/paintings-dropdown/futurism/severini.jpg);
 	}
 
 	.search-form {
@@ -720,5 +824,17 @@
 
 	.subscribe-btn:focus:not(.focus-visible) {
 		box-shadow: none;
+	}
+
+	/* about */
+
+	.about .heading {
+		margin-bottom: 21px;
+		margin-left: -3px;
+	}
+
+	.about .article {
+		max-width: 1080px;
+		margin-left: -1px;
 	}
 }
