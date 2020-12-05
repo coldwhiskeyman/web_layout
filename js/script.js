@@ -13,9 +13,13 @@ $(function() {
 		}, 500);
 	};
 
+	// burger menu
+
 	$('.burger').on('click', function() {
 		$('.header-nav').slideToggle();
 	});
+
+	// dropdown artist lists
 
 	let openedDropdown;
 	let justOpened = false;
@@ -46,13 +50,61 @@ $(function() {
 		$(this).find('.styles-list__link::after').css('transform', 'rotate(-180deg)'); // не работает
 	});
 
-	let mySwiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    loop: true,
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
+	// info section background
+
+	mobileBgs = [
+		"http://127.0.0.1:5500/img/info-bg/mobile-1.jpg",
+		"http://127.0.0.1:5500/img/info-bg/mobile-2.jpg",
+		"http://127.0.0.1:5500/img/info-bg/mobile-3.jpg"
+	];
+	tabletBgs = [
+		"http://127.0.0.1:5500/img/info-bg/tablet-1.jpg",
+		"http://127.0.0.1:5500/img/info-bg/tablet-2.jpg",
+		"http://127.0.0.1:5500/img/info-bg/tablet-3.jpg"
+	];
+	desktopBgs = [
+		"http://127.0.0.1:5500/img/info-bg/desktop-1.jpg",
+		"http://127.0.0.1:5500/img/info-bg/desktop-2.jpg",
+		"http://127.0.0.1:5500/img/info-bg/desktop-3.jpg"
+	];
+
+	mobileBgs.forEach(function(img) {
+		new Image().src = img;
+	});
+	tabletBgs.forEach(function(img) {
+		new Image().src = img;
+	});
+	desktopBgs.forEach(function(img) {
+		new Image().src = img;
+	});
+
+	setInterval(function() {
+		let infoSection = $('.info');
+
+		if ($(window).width() < 768) {
+			if (infoSection.css('background-image') === 'url("' + mobileBgs[0] + '")') {
+				infoSection.css('background-image', 'url("' + mobileBgs[1] + '")')
+			} else if (infoSection.css('background-image') === 'url("' + mobileBgs[1] + '")') {
+				infoSection.css('background-image', 'url("' + mobileBgs[2] + '")')
+			} else {
+				infoSection.css('background-image', 'url("' + mobileBgs[0] + '")')
+			}
+		} else if ($(window).width() < 1650) {
+			if (infoSection.css('background-image') === 'url("' + tabletBgs[0] + '")') {
+				infoSection.css('background-image', 'url("' + tabletBgs[1] + '")')
+			} else if (infoSection.css('background-image') === 'url("' + tabletBgs[1] + '")') {
+				infoSection.css('background-image', 'url("' + tabletBgs[2] + '")')
+			} else {
+				infoSection.css('background-image', 'url("' + tabletBgs[0] + '")')
+			}
+		} else {
+			if (infoSection.css('background-image') === 'url("' + desktopBgs[0] + '")') {
+				infoSection.css('background-image', 'url("' + desktopBgs[1] + '")')
+			} else if (infoSection.css('background-image') === 'url("' + desktopBgs[1] + '")') {
+				infoSection.css('background-image', 'url("' + desktopBgs[2] + '")')
+			} else {
+				infoSection.css('background-image', 'url("' + desktopBgs[0] + '")')
+			}
+		}
+	}, 10000);
 });

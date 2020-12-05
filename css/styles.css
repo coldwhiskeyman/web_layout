@@ -80,7 +80,7 @@
 	font-weight: 400;
 }
 
-.article {
+.paragraph {
 	line-height: 2em;
 }
 
@@ -91,7 +91,7 @@
 	padding: 12px 0 11px;
 }
 
-.header .container {
+.header__container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -187,26 +187,14 @@
 
 .info {
 	min-height: 310px;
-	text-align: center;
-	color: var(--white);
-}
-
-.swiper-slide {
 	padding-top: 35px;
 	padding-bottom: 45px;
-	background-size: cover;
-}
-
-.swiper-slide_1 {
+	text-align: center;
 	background-image: url('../img/info-bg/mobile-1.jpg');
-}
-
-.swiper-slide_2 {
-	background-image: url('../img/info-bg/mobile-2.jpg');
-}
-
-.swiper-slide_3 {
-	background-image: url('../img/info-bg/mobile-3.jpg');
+	background-size: cover;
+	color: var(--white);
+	transition-property: background-image;
+	transition-duration: 3s;
 }
 
 .tagline {
@@ -216,19 +204,21 @@
 
 .subtext {
 	max-width: 265px;
-	margin: 0 auto 40px auto;
-	line-height: 1.4;
+	margin: 0 auto 40px; /* непонятный маргин справа */
+	line-height: 1.4em;
 	font-size: 12px;
 }
 
 .subscribe-btn {
-	min-width: 170px;
+	min-width: 200px;
 	padding: 14px;
 	border: none;
 	border-radius: 20px;
 	background-color: var(--purple);
 	font-size: 12px;
 	font-weight: 700;
+	transition-property: box-shadow, background-color;
+	transition-duration: 0.3s;
 }
 
 .subscribe-btn:active {
@@ -244,11 +234,11 @@
 	color: var(--dark-grey);
 }
 
-.about .heading {
+.about__heading {
 	margin-bottom: 16px;
 }
 
-.about .article {
+.about__paragraph {
 	font-size: 14px;
 }
 
@@ -321,43 +311,28 @@
 
 	.info {
 		min-height: 668px;
+		padding-top: 112px;
+		padding-bottom: 113px;
+		background-image: url('../img/info-bg/tablet-1.jpg');
 		text-align: left;
 	}
 
-	.swiper-slide {
-		padding-top: 112px;
-		padding-bottom: 113px;
-	}
-
-	.swiper-slide_1 {
-		background-image: url('../img/info-bg/tablet-1.jpg');
-	}
-
-	.swiper-slide_2 {
-		background-image: url('../img/info-bg/tablet-2.jpg');
-	}
-
-	.swiper-slide_3 {
-		background-image: url('../img/info-bg/tablet-3.jpg');
-	}
-
 	.tagline {
-		margin-left: 45px;
+		margin-left: -6px;
 		margin-bottom: 13px;
 		font-size: 72px;
 	}
 
 	.subtext {
 		max-width: 660px;
-		margin: 0 50px 133px 50px;
+		margin: 0 0 133px 0;
 		line-height: 1.7em;
 		font-size: 18px;
 		font-weight: 700;
 	}
 
 	.subscribe-btn {
-		min-width: 262px;
-		margin-left: 50px;
+		min-width: 313px;
 		padding: 26px;
 		border: none;
 		border-radius: 35px;
@@ -375,11 +350,11 @@
 		padding-top: 85px;
 	}
 
-	.about .heading {
+	.about__heading {
 		margin-bottom: 20px;
 	}
 
-	.about .article {
+	.about__paragraph {
 		font-size: 16px;
 		margin-left: 2px;
 	}
@@ -389,8 +364,8 @@
 
 	/* about */
 
-	.about .heading,
-	.about .article {
+	.about__heading,
+	.about__paragraph {
 		margin-left: -2px;
 	}
 
@@ -416,7 +391,7 @@
 		z-index: 10;
 	}
 
-	.header .container {
+	.header__container {
 		justify-content: start;
 	}
 
@@ -560,20 +535,25 @@
 	}
 
 	.artist-dropdown__list {
+		width: 220px;
+		height: 220px;
+	}
+
+	.artist-dropdown__list.scrollbar {
 		width: 240px;
 		height: 220px;
 		overflow-y: scroll;
 	}
 
-	.artist-dropdown__list::-webkit-scrollbar {
+	.artist-dropdown__list.scrollbar::-webkit-scrollbar {
 		width: 2px;
 	}
 
-	.artist-dropdown__list::-webkit-scrollbar-track {
+	.artist-dropdown__list.scrollbar::-webkit-scrollbar-track {
 		background-color: var(--black);
 	}
 
-	.artist-dropdown__list::-webkit-scrollbar-thumb {
+	.artist-dropdown__list.scrollbar::-webkit-scrollbar-thumb {
 		background-color: var(--purple);
 	}
 
@@ -773,24 +753,9 @@
 
 	.info {
 		min-height: 700px;
-		z-index: 0;
-	}
-
-	.swiper-slide {
 		padding-top: 141px;
 		padding-bottom: 120px;
-	}
-
-	.swiper-slide_1 {
 		background-image: url('../img/info-bg/desktop-1.jpg');
-	}
-
-	.swiper-slide_2 {
-		background-image: url('../img/info-bg/desktop-2.jpg');
-	}
-
-	.swiper-slide_3 {
-		background-image: url('../img/info-bg/desktop-3.jpg');
 	}
 
 	.swiper-slide__container {
@@ -828,12 +793,12 @@
 
 	/* about */
 
-	.about .heading {
+	.about__heading {
 		margin-bottom: 21px;
 		margin-left: -3px;
 	}
 
-	.about .article {
+	.about__paragraph {
 		max-width: 1080px;
 		margin-left: -1px;
 	}
