@@ -107,4 +107,24 @@ $(function() {
 			}
 		}
 	}, 10000);
+
+	// gallery
+
+	let mySwiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    loop: true,
+    // If we need pagination
+    navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+
+	$('.selectric').selectric();
+
+	// $('.selectric').on('mouseover click', function() {
+	// 	if ($('.selectric-selectric-middle').hasClass('.selectric-hover')) {
+	// 		$('.selectric-selectric-top .selectric').css('border-radius', '6px')
+	// 	}
+	// });
 });

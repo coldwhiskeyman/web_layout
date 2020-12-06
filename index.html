@@ -6,10 +6,13 @@
 	<title>Blanchard</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/selectric.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-600.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body class="body">
 	<header class="header">
@@ -124,9 +127,53 @@
 					набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.</p>
 			</div>
 		</section>
+
+		<section class="gallery">
+			<div class="container">
+				<h2 class="heading gallery__heading text-block-reset">Галерея</h2>
+				<form class="gallery-form">
+					<legend class="gallery-form__heading">Фильтровать по:</legend>
+					<select class="selectric selectric_top" name="author">
+						<option disabled selected>Автор</option>
+						<option value="malevich">Малевич</option>
+					</select>
+					<select class="selectric selectric_middle" name="style">
+						<option disabled selected>Направление</option>
+						<option value="avantgarde">Авангард</option>
+					</select>
+					<select class="selectric selectric_bottom" name="technique">
+						<option disabled selected>Техника</option>
+						<option value="painting">Живопись</option>
+					</select>
+				</form>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img class="gallery__img" src="img/gallery/1.jpg" alt="Картина">
+						</div>
+						<div class="swiper-slide">
+							<img class="gallery__img" src="img/gallery/2.jpg" alt="Картина">
+						</div>
+						<div class="swiper-slide">
+							<img class="gallery__img" src="img/gallery/3.jpg" alt="Картина">
+						</div>
+					</div>
+					<div class="pagination gallery__pagination">
+						<div class="swiper-button-prev pagination__button"></div>
+						<span class="pagination__index">1 / 18</span>
+						<div class="swiper-button-next pagination__button"></div>
+					</div>
+				</div>
+				<p class="paragraph gallery__paragraph text-block-reset">
+					Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
+					<a class="paragraph__link selectable link-reset">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+				</p>
+			</div>
+		</section>
 	</main>
 	<script src="js/jquery-3.5.1.min.js"></script>
 	<script src="/node_modules/focus-visible/dist/focus-visible.min.js"></script>
+	<script src="js/jquery.selectric.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

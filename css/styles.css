@@ -230,7 +230,7 @@
 
 .about {
 	padding-top: 53px;
-	padding-bottom: 50px;
+	padding-bottom: 40px;
 	color: var(--dark-grey);
 }
 
@@ -240,6 +240,95 @@
 
 .about__paragraph {
 	font-size: 14px;
+}
+
+/* gallery */
+
+.gallery {
+	padding-top: 53px;
+	padding-bottom: 70px;
+	background-image: url('../img/gallery-bg-mobile.jpg');
+	background-size: cover;
+	color: var(--white);
+}
+
+.gallery__heading {
+	margin-bottom: 22px;
+}
+
+.gallery-form {
+	margin-bottom: 41px;
+}
+
+.gallery-form__heading {
+	margin-bottom: 12px;
+}
+
+.gallery__slide {
+	width: 100%;
+	height: 367px;
+}
+
+.gallery__img {
+	width: auto;
+	height: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+.swiper-wrapper {
+	margin-bottom: 20px;
+}
+
+.gallery__pagination {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 130px;
+	margin: 0 auto 20px;
+}
+
+.pagination__button {
+	position: static;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin: 0;
+	border-radius: 50%;
+	background-color: #666;
+}
+
+.pagination__button::after {
+	position: absolute;
+	content: '';
+	top: 11px;
+	width: 7px;
+	height: 7px;
+	border-left: 1px solid var(--white);
+	border-bottom: 1px solid var(--white);
+}
+
+.swiper-button-prev::after {
+	transform: rotate(45deg);
+	left: 12px;
+}
+
+.swiper-button-next::after {
+	transform: rotate(-135deg);
+	right: 12px;
+}
+
+.pagination__index {
+	display: inline-block;
+}
+
+.gallery__paragraph {
+	font-weight: 600;
+}
+
+.paragraph__link {
+	color: var(--light-purple);
 }
 
 @media(min-width: 768px) {
