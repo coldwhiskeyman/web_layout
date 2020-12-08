@@ -111,13 +111,27 @@ $(function() {
 	// gallery
 
 	let mySwiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    loop: true,
-    // If we need pagination
     navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
+
+		sldesPerView: 1,
+		slidesPerColumn: 1,
+		spaceBetween: 15,
+
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				slidesPerColumn: 2,
+				spaceBetween: 34,
+			},
+			1650: {
+				slidesPerView: 3,
+				slidesPerColumn: 2,
+				spaceBetween: 50,
+			}
+		}
 	});
 
 	$('.selectric').selectric();

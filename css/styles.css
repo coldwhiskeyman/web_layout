@@ -309,6 +309,19 @@
 	border-bottom: 1px solid var(--white);
 }
 
+.pagination__button:hover {
+	background-color: var(--purple);
+}
+
+.pagination__button:active {
+	background-color: var(--dark-purple);
+	box-shadow: 0 0 0 2px var(--light-purple) inset;
+}
+
+.pagination__button:focus {
+	box-shadow: 0 0 0 2px var(--dark-purple) inset;
+}
+
 .swiper-button-prev::after {
 	transform: rotate(45deg);
 	left: 12px;
@@ -437,6 +450,7 @@
 
 	.about {
 		padding-top: 85px;
+		padding-bottom: 70px;
 	}
 
 	.about__heading {
@@ -446,6 +460,53 @@
 	.about__paragraph {
 		font-size: 16px;
 		margin-left: 2px;
+	}
+
+	/* gallery */
+
+	.gallery {
+		padding-top: 85px;
+		padding-bottom: 70px;
+		background-image: url('../img/gallery-bg-tablet.jpg');
+	}
+
+	.gallery__heading {
+		margin-bottom: 28px;
+	}
+
+	.gallery-form {
+		width: 280px;
+		margin-bottom: 32px;
+	}
+
+	.gallery-form__heading {
+		margin-bottom: 16px;
+	}
+
+	.swiper-container {
+		display: flex;
+		flex-direction: column-reverse;
+		margin-bottom: 30px;
+	}
+
+	.gallery__pagination {
+		margin: 0 0 30px;
+	}
+
+	.swiper-wrapper {
+		height: 594px;
+		margin: 0;
+	}
+
+	.gallery__slide {
+		width: 317px;
+		height: 280px;
+		overflow: hidden;
+	}
+
+	.gallery__img {
+		width: 100%;
+		height: auto;
 	}
 }
 
@@ -458,6 +519,42 @@
 		margin-left: -2px;
 	}
 
+	/* gallery */
+
+	.gallery {
+		height: 839px;
+	}
+
+	.gallery__container {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		height: 839px;
+	}
+
+	.gallery__heading {
+		order: 1;
+		max-width: 280px;
+	}
+
+	.gallery-form {
+		order: 2;
+		margin-bottom: 290px;
+		margin-right: 50px;
+	}
+
+	.gallery__paragraph {
+		order: 3;
+		max-width: 280px;
+	}
+
+	.swiper-container {
+		order: 4;
+		width: 594px;
+		height: 674px;
+		margin: 0;
+		padding-top: 20px;
+	}
 }
 
 @media(min-width: 1650px) {
@@ -890,5 +987,35 @@
 	.about__paragraph {
 		max-width: 1080px;
 		margin-left: -1px;
+	}
+
+	/* gallery */
+
+	.gallery {
+		height: 995px;
+	}
+
+	.gallery-form {
+		width: 400px;
+		margin-bottom: 477px;
+	}
+
+	.gallery__paragraph {
+		max-width: 400px;
+	}
+
+	.swiper-container {
+		width: 1150px;
+		height: 830px;
+		padding-top: 20px;
+	}
+
+	.swiper-wrapper {
+		height: 810px;
+	}
+
+	.gallery__slide {
+		width: 350px;
+		height: 350px;
 	}
 }
