@@ -22,11 +22,13 @@ $(function() {
 	// dropdown artist lists
 
 	let openedDropdown;
+	let activeLink;
 	let justOpened = false;
 
 	$('.body').on('click', function(event) {
 		if (openedDropdown && event.target != $('.styles-list__item') && event.target != $('.artist-dropdown') && !justOpened) {
 			hideModal(openedDropdown);
+			activeLink.find('.styles-list__button').removeClass('rotated');
 		}
 	})
 
@@ -36,74 +38,70 @@ $(function() {
 		if (dropdown.hasClass('closed')) {
 			if (openedDropdown) {
 				hideModal(openedDropdown);
+				activeLink.find('.styles-list__button').removeClass('rotated');
 			};
 			showModal(dropdown);
 			openedDropdown = dropdown;
+			activeLink = $(this);
+			activeLink.find('.styles-list__button').addClass('rotated');
 			justOpened = true;
 			setTimeout(function() {
 				justOpened = false;
 			}, 1000)
 		} else {
 			hideModal(dropdown);
+			activeLink.find('.styles-list__button').removeClass('rotated');
 			openedDropdown = null;
+			activeLink = null;
 		};
-		$(this).find('.styles-list__link::after').css('transform', 'rotate(-180deg)'); // не работает
 	});
 
 	// info section background
 
 	mobileBgs = [
-		"http://127.0.0.1:5500/img/info-bg/mobile-1.jpg",
-		"http://127.0.0.1:5500/img/info-bg/mobile-2.jpg",
-		"http://127.0.0.1:5500/img/info-bg/mobile-3.jpg"
+		"img/info-bg/mobile-1.jpg",
+		"img/info-bg/mobile-2.jpg",
+		"img/info-bg/mobile-3.jpg"
 	];
 	tabletBgs = [
-		"http://127.0.0.1:5500/img/info-bg/tablet-1.jpg",
-		"http://127.0.0.1:5500/img/info-bg/tablet-2.jpg",
-		"http://127.0.0.1:5500/img/info-bg/tablet-3.jpg"
+		"img/info-bg/tablet-1.jpg",
+		"img/info-bg/tablet-2.jpg",
+		"img/info-bg/tablet-3.jpg"
 	];
 	desktopBgs = [
-		"http://127.0.0.1:5500/img/info-bg/desktop-1.jpg",
-		"http://127.0.0.1:5500/img/info-bg/desktop-2.jpg",
-		"http://127.0.0.1:5500/img/info-bg/desktop-3.jpg"
+		"img/info-bg/desktop-1.jpg",
+		"img/info-bg/desktop-2.jpg",
+		"img/info-bg/desktop-3.jpg"
 	];
-
-	mobileBgs.forEach(function(img) {
-		new Image().src = img;
-	});
-	tabletBgs.forEach(function(img) {
-		new Image().src = img;
-	});
-	desktopBgs.forEach(function(img) {
-		new Image().src = img;
-	});
 
 	setInterval(function() {
 		let infoSection = $('.info');
+		index = infoSection.css('background-image').indexOf('img/info-bg');
+		slicedUrl = infoSection.css('background-image').slice(index);
 
 		if ($(window).width() < 768) {
-			if (infoSection.css('background-image') === 'url("' + mobileBgs[0] + '")') {
-				infoSection.css('background-image', 'url("' + mobileBgs[1] + '")')
-			} else if (infoSection.css('background-image') === 'url("' + mobileBgs[1] + '")') {
-				infoSection.css('background-image', 'url("' + mobileBgs[2] + '")')
+			if (slicedUrl === mobileBgs[0] + '")') {
+				infoSection.css('background-image', 'url("' + mobileBgs[1] + '")');
+			} else if (slicedUrl === mobileBgs[1] + '")') {
+				infoSection.css('background-image', 'url("' + mobileBgs[2] + '")');
 			} else {
-				infoSection.css('background-image', 'url("' + mobileBgs[0] + '")')
+				infoSection.css('background-image', 'url("' + mobileBgs[0] + '")');
 			}
 		} else if ($(window).width() < 1650) {
-			if (infoSection.css('background-image') === 'url("' + tabletBgs[0] + '")') {
-				infoSection.css('background-image', 'url("' + tabletBgs[1] + '")')
-			} else if (infoSection.css('background-image') === 'url("' + tabletBgs[1] + '")') {
-				infoSection.css('background-image', 'url("' + tabletBgs[2] + '")')
+			if (slicedUrl === tabletBgs[0] + '")') {
+				infoSection.css('background-image', 'url("' + tabletBgs[1] + '")');
+			} else if (slicedUrl === tabletBgs[1] + '")') {
+				infoSection.css('background-image', 'url("' + tabletBgs[2] + '")');
 			} else {
-				infoSection.css('background-image', 'url("' + tabletBgs[0] + '")')
+				infoSection.css('background-image', 'url("' + tabletBgs[0] + '")');
 			}
 		} else {
-			if (infoSection.css('background-image') === 'url("' + desktopBgs[0] + '")') {
-				infoSection.css('background-image', 'url("' + desktopBgs[1] + '")')
-			} else if (infoSection.css('background-image') === 'url("' + desktopBgs[1] + '")') {
-				infoSection.css('background-image', 'url("' + desktopBgs[2] + '")')
+			if (slicedUrl === desktopBgs[0] + '")') {
+				infoSection.css('background-image', 'url("' + desktopBgs[1] + '")');
+			} else if (slicedUrl === desktopBgs[1] + '")') {
+				infoSection.css('background-image', 'url("' + desktopBgs[2] + '")');
 			} else {
-				infoSection.css('background-image', 'url("' + desktopBgs[0] + '")')
+				infoSection.css('background-image', 'url("' + desktopBgs[0] + '")');
 			}
 		}
 	}, 10000);
@@ -114,6 +112,10 @@ $(function() {
     navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'fraction',
 		},
 
 		sldesPerView: 1,

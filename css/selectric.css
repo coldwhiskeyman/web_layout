@@ -185,10 +185,12 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background: #F8F8F8;
-  border: 1px solid #C4C4C4;
+  background: #000;
+	border: 1px solid #fff;
+	border-radius: 6px;
   z-index: -1;
-  box-shadow: 0 0 10px -6px;
+	box-shadow: 0 0 10px -6px;
+	transition-duration: 0.3s;
 }
 
 .selectric-items .selectric-scroll {
@@ -215,8 +217,9 @@
   padding: 8px;
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #EEE;
-  color: #666;
-  cursor: pointer;
+  color: #fff;
+	cursor: pointer;
+	transition-duration: 0.3s;
 }
 
 .selectric-items li.selected {
@@ -235,6 +238,7 @@
 }
 
 .selectric-items .disabled {
+	display: none;
   filter: alpha(opacity=50);
   opacity: 0.5;
   cursor: default !important;
