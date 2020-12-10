@@ -1,0 +1,119 @@
+.info {
+	min-height: 310px;
+	padding-top: 35px;
+	padding-bottom: 45px;
+	text-align: center;
+	background-image: url('../img/info-bg/mobile-1.jpg');
+	background-size: cover;
+	color: var(--white);
+	transition-property: background-image;
+	transition-duration: 3s;
+}
+
+.tagline {
+	margin-bottom: 13px;
+	font-size: 32px;
+}
+
+.subtext {
+	max-width: 265px;
+	margin: 0 auto 40px; /* непонятный маргин справа */
+	line-height: 1.4em;
+	font-size: 12px;
+}
+
+.subscribe-btn {
+	min-width: 200px;
+	padding: 14px;
+	border: none;
+	border-radius: 20px;
+	background-color: var(--purple);
+	font-size: 12px;
+	font-weight: 700;
+	transition-property: box-shadow, background-color;
+	transition-duration: 0.3s;
+}
+
+.subscribe-btn:active {
+	box-shadow: 0 0 0 2px var(--light-purple) inset;
+	background-color: var(--dark-purple);
+}
+
+@media(min-width: 768px) {
+	.info {
+		min-height: 668px;
+		padding-top: 112px;
+		padding-bottom: 113px;
+		background-image: url('../img/info-bg/tablet-1.jpg');
+		text-align: left;
+	}
+
+	.tagline {
+		margin-left: -6px;
+		margin-bottom: 13px;
+		font-size: 72px;
+	}
+
+	.subtext {
+		max-width: 660px;
+		margin: 0 0 133px 0;
+		line-height: 1.7em;
+		font-size: 18px;
+		font-weight: 700;
+	}
+
+	.subscribe-btn {
+		min-width: 313px;
+		padding: 26px;
+		border: none;
+		border-radius: 35px;
+		font-size: 18px;
+	}
+
+	.subscribe-btn:active {
+		box-shadow: 0 0 0 3px var(--light-purple) inset;
+		background-color: var(--dark-purple);
+	}
+}
+
+@media(min-width: 1650px) {
+	.info {
+		min-height: 700px;
+		padding-top: 141px;
+		padding-bottom: 120px;
+		background-image: url('../img/info-bg/desktop-1.jpg');
+	}
+
+	.swiper-slide__container {
+		width: 1600px;
+		margin: 0 auto;
+	}
+
+	.tagline {
+		margin-left: -5px;
+		max-width: 600px;
+		margin-bottom: 21px;
+	}
+
+	.subtext {
+		margin-left: 0;
+		max-width: 580px;
+		margin-bottom: 92px;
+	}
+
+	.subscribe-btn {
+		margin-left: 0;
+	}
+
+	.subscribe-btn:hover {
+		box-shadow: 0 0 0 3px var(--light-purple) inset;
+	}
+
+	.subscribe-btn:focus {
+		box-shadow: 0 0 0 3px var(--dark-purple) inset;
+	}
+
+	.subscribe-btn:focus:not(.focus-visible) {
+		box-shadow: none;
+	}
+}

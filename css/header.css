@@ -1,0 +1,538 @@
+.upper-header {
+	background-color: var(--black);
+	padding: 12px 0 11px;
+}
+
+.header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.lower-header {
+	display: none;
+}
+
+.logo {
+	width: 97px;
+}
+
+.search {
+	width: 16px;
+	height: 16px;
+	border: none;
+	background-color: transparent;
+	background-image: url('../img/search.svg');
+	background-size: contain;
+}
+
+.burger {
+	width: 16px;
+	height: 15px;
+	position: relative;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+}
+
+.burger__element,
+.burger__element::before,
+.burger__element::after {
+	display: block;
+	position: absolute;
+	height: 2px;
+	background-color: var(--white);
+}
+
+.burger__element {
+	top: 5px;
+	width: 16px;
+}
+
+.burger__element::before {
+	content: "";
+	top: -6px;
+	width: 20px;
+}
+
+.burger__element::after {
+	content: "";
+	top: 7px;
+	width: 13px;
+}
+
+.closed {
+	display: none;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.menu-list {
+	width: 100%;
+	padding: 0 15px;
+}
+
+.menu-list__item {
+	padding: 10px 0;
+}
+
+.menu-list__item:not(:last-child) {
+	border-bottom: 1px solid var(--purple);
+}
+
+.header-nav {
+	display: none;
+	position: absolute;
+	top: 45px;
+	left: 0;
+	width: 100%;
+	background-color: var(--white);
+}
+
+.login {
+	display: none;
+}
+
+@media(min-width: 768px) {
+	.upper-header {
+		padding: 29px 0;
+	}
+
+	.logo {
+		width: 188px;
+	}
+
+	.search {
+		width: 29px;
+		height: 29px;
+	}
+
+	.burger {
+		width: 30px;
+		height: 28px;
+	}
+
+	.burger__element,
+	.burger__element::before,
+	.burger__element::after {
+		height: 3px;
+	}
+
+	.burger__element {
+		top: 13px;
+		width: 28px;
+	}
+
+	.burger__element::before {
+		content: "";
+		top: -12px;
+		width: 36px;
+	}
+
+	.burger__element::after {
+		content: "";
+		top: 12px;
+		width: 24px;
+	}
+
+	.menu-list {
+		padding: 0 50px;
+	}
+
+	.menu-list__item {
+		padding: 15px 0;
+		font-size: 18px;
+	}
+
+	.header-nav {
+		top: 100px;
+	}
+}
+
+@media(min-width: 1650px) {
+	.link-reset {
+		cursor: pointer;
+	}
+
+	.container {
+		width: 1600px;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	/* header */
+
+	.header {
+		position: relative;
+		font-size: 18px;
+		color: var(--white);
+		z-index: 10;
+	}
+
+	.header__container {
+		justify-content: start;
+	}
+
+	.upper-header {
+		padding: 29px 0 31px;
+	}
+
+	.lower-header {
+		display: block;
+		position: absolute;
+		width: 100%;
+		padding: 16px 0;
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+
+	.search,
+	.burger {
+		display: none;
+	}
+
+	.logo {
+		width: 223px;
+		margin-right: 175px;
+	}
+
+	.header-nav {
+		position: static;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: transparent;
+	}
+
+	.login {
+		display: block;
+		padding-left: 20px;
+		margin-right: -7px;
+		border: none;
+		background-color: transparent;
+		background-image: url('../img/login_icon.svg');
+		background-repeat: no-repeat;
+		background-position: left;
+		color: var(--white);
+	}
+
+	.login:hover {
+		padding-left: 24px;
+		background-image: url('../img/login_icon_light_purple.svg');
+	}
+
+
+	.login:active {
+		color: var(--purple);
+		background-image: url('../img/login_icon_purple.svg');
+	}
+
+	.menu-list,
+	.styles-list {
+		display: flex;
+	}
+
+	.menu-list {
+		padding: 0;
+	}
+
+	.menu-list__item {
+		font-weight: 600;
+		padding: 0;
+	}
+
+	.menu-list__item:not(:last-child) {
+		margin-right: 54px;
+		border-bottom: none;
+	}
+
+	.menu-list__link {
+		display: inline-block;
+		padding: 2px 4px;
+	}
+
+	.lower-header .container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.styles-list {
+		margin-left: -4px;
+	}
+
+	.styles-list__item {
+		position: relative;
+	}
+
+	.styles-list__item:not(:last-child) {
+		margin-right: 89px;
+	}
+
+	.styles-list__link {
+		padding: 1px 20px 1px 4px;
+	}
+
+	.styles-list__button {
+		position: absolute;
+		top: 7px;
+		right: 7px;
+		width: 7px;
+		height: 7px;
+		padding: 0;
+		border-bottom: 1px solid var(--white);
+		border-right: 1px solid var(--white);
+		border-top: 0;
+		border-left: 0;
+		background-color: transparent;
+		transform: rotate(45deg);
+		transition-duration: 0.3s;
+		transition-property: transform, border;
+	}
+
+	.styles-list__item:hover .styles-list__button {
+		border-color: var(--purple);
+	}
+
+	.styles-list__item:hover .styles-list__link {
+		color: var(--purple);
+	}
+
+	.styles-list__item:active .styles-list__button {
+		border-color: var(--dark-purple);
+	}
+
+	.styles-list__item:active .styles-list__link {
+		color: var(--dark-purple);
+	}
+
+	.styles-list__button.rotated {
+		transform: rotate(-135deg);
+	}
+
+	.artist-dropdown {
+		position: absolute;
+		top: 45px;
+		width: 300px;
+		height: 300px;
+		padding: 40px 20px 40px 40px;
+		background-color: #444c;
+		transition-duration: 0.3s;
+	}
+
+	.artist-dropdown__list {
+		width: 220px;
+		height: 220px;
+	}
+
+	.artist-dropdown__list.scrollbar {
+		width: 240px;
+		height: 220px;
+		overflow-y: scroll;
+	}
+
+	.artist-dropdown__list.scrollbar::-webkit-scrollbar {
+		width: 2px;
+	}
+
+	.artist-dropdown__list.scrollbar::-webkit-scrollbar-track {
+		background-color: var(--black);
+	}
+
+	.artist-dropdown__list.scrollbar::-webkit-scrollbar-thumb {
+		background-color: var(--purple);
+	}
+
+	.artist-dropdown__item {
+		position: relative;
+		width: 220px;
+		height: 40px;
+		padding: 11px 14px 10px;
+		font-size: 14px;
+		font-weight: 600;
+		transition-property: box-shadow;
+		transition-duration: 0.3s;
+	}
+
+	.artist-dropdown__item:hover {
+		box-shadow: 0 0 0 2px var(--purple) inset;
+	}
+
+	.artist-dropdown__item:active::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(194, 131, 243, 0.4);
+	}
+
+	.artist-dropdown__item:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	.styles-list__item:nth-child(1) .artist-dropdown__item:nth-child(1) {
+		background-image: url(../img/paintings-dropdown/realism/manet.jpg);
+	}
+
+	.styles-list__item:nth-child(1) .artist-dropdown__item:nth-child(2) {
+		background-image: url(../img/paintings-dropdown/realism/degas.jpg);
+	}
+
+	.styles-list__item:nth-child(1) .artist-dropdown__item:nth-child(3) {
+		background-image: url(../img/paintings-dropdown/realism/repin.jpg);
+	}
+
+	.styles-list__item:nth-child(1) .artist-dropdown__item:nth-child(4) {
+		background-image: url(../img/paintings-dropdown/realism/brullov.jpg);
+	}
+
+	.styles-list__item:nth-child(1) .artist-dropdown__item:nth-child(5) {
+		background-image: url(../img/paintings-dropdown/realism/perov.jpg);
+	}
+
+	.styles-list__item:nth-child(1) .artist-dropdown__item:nth-child(6) {
+		background-image: url(../img/paintings-dropdown/realism/courbet.jpg);
+	}
+
+
+	.styles-list__item:nth-child(2) .artist-dropdown__item:nth-child(1) {
+		background-image: url(../img/paintings-dropdown/impressionism/monet.jpg);
+	}
+
+	.styles-list__item:nth-child(2) .artist-dropdown__item:nth-child(2) {
+		background-image: url(../img/paintings-dropdown/impressionism/moriso.jpg);
+	}
+
+	.styles-list__item:nth-child(2) .artist-dropdown__item:nth-child(3) {
+		background-image: url(../img/paintings-dropdown/impressionism/pissarro.jpg);
+	}
+
+	.styles-list__item:nth-child(2) .artist-dropdown__item:nth-child(4) {
+		background-image: url(../img/paintings-dropdown/impressionism/renoir.jpg);
+	}
+
+
+	.styles-list__item:nth-child(3) .artist-dropdown__item:nth-child(1) {
+		background-image: url(../img/paintings-dropdown/postimpressionism/cezanne.jpg);
+	}
+
+	.styles-list__item:nth-child(3) .artist-dropdown__item:nth-child(2) {
+		background-image: url(../img/paintings-dropdown/postimpressionism/gauguin.jpg);
+	}
+
+	.styles-list__item:nth-child(3) .artist-dropdown__item:nth-child(3) {
+		background-image: url(../img/paintings-dropdown/postimpressionism/matisse.jpg);
+	}
+
+	.styles-list__item:nth-child(3) .artist-dropdown__item:nth-child(4) {
+		background-image: url(../img/paintings-dropdown/postimpressionism/van-gogh.jpg);
+	}
+
+
+	.styles-list__item:nth-child(4) .artist-dropdown__item:nth-child(1) {
+		background-image: url(../img/paintings-dropdown/avantgarde/kandinsky.jpg);
+	}
+
+	.styles-list__item:nth-child(4) .artist-dropdown__item:nth-child(2) {
+		background-image: url(../img/paintings-dropdown/avantgarde/larionov.jpg);
+	}
+
+	.styles-list__item:nth-child(4) .artist-dropdown__item:nth-child(3) {
+		background-image: url(../img/paintings-dropdown/avantgarde/malevich.jpg);
+	}
+
+	.styles-list__item:nth-child(4) .artist-dropdown__item:nth-child(4) {
+		background-image: url(../img/paintings-dropdown/avantgarde/pirosmani.jpg);
+	}
+
+
+	.styles-list__item:nth-child(5) .artist-dropdown__item:nth-child(1) {
+		background-image: url(../img/paintings-dropdown/futurism/boccioni.jpg);
+	}
+
+	.styles-list__item:nth-child(5) .artist-dropdown__item:nth-child(2) {
+		background-image: url(../img/paintings-dropdown/futurism/carra.jpg);
+	}
+
+	.styles-list__item:nth-child(5) .artist-dropdown__item:nth-child(3) {
+		background-image: url(../img/paintings-dropdown/futurism/giacomo.jpg);
+	}
+
+	.styles-list__item:nth-child(5) .artist-dropdown__item:nth-child(4) {
+		background-image: url(../img/paintings-dropdown/futurism/severini.jpg);
+	}
+
+	.search-form {
+		display: flex;
+		margin-right: -6px;
+		padding: 6px;
+		transition-property: box-shadow;
+		transition-duration: 0.3s;
+	}
+
+	.search-form__btn {
+		width: 22px;
+		height: 22px;
+		margin-right: 11px;
+		align-self: flex-end;
+		border: none;
+		background-color: transparent;
+		background-image: url('../img/search.svg');
+		background-size: contain;
+		background-position: bottom;
+		transition-property: background-image;
+		transition-duration: 0.3s;
+	}
+
+	.search-form__input {
+		width: 218px;
+		padding-left: 0;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		border: none;
+		border-bottom: 1px solid var(--white);
+		background-color: transparent;
+		caret-color: var(--light-purple);
+		transition-property: border;
+		transition-duration: 0.3s;
+	}
+
+	.search-form__input::-ms-clear {
+		display: none;
+		width: 0;
+		height: 0;
+	}
+	.search-form__input::-ms-reveal {
+		display: none;
+		width: 0;
+		height: 0;
+	}
+
+	.search-form__input::-webkit-search-decoration,
+	.search-form__input::-webkit-search-cancel-button,
+	.search-form__input::-webkit-search-results-button,
+	.search-form__input::-webkit-search-results-decoration {
+		display: none;
+	}
+
+
+	.search-form__input::placeholder {
+		color: var(--white);
+	}
+
+	.search-form:hover .search-form__input {
+		border-bottom: 1px solid var(--light-purple);
+	}
+
+	.search-form:hover > .search-form__btn,
+	.search-form:focus-within > .search-form__btn {
+		background-image: url('../img/search_light_purple.svg');
+	}
+
+	.search-form:focus-within {
+		box-shadow: 0 0 0 2px var(--dark-purple);
+	}
+}
