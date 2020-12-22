@@ -50,7 +50,7 @@
 }
 
 .selectable {
-	transition-property: box-shadow, color, background-image;
+	transition-property: box-shadow, color, background;
 	transition-duration: 0.3s;
 }
 

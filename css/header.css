@@ -288,7 +288,7 @@
 		background-color: transparent;
 		transform: rotate(45deg);
 		transition-duration: 0.3s;
-		transition-property: transform, border;
+		transition-property: transform, border, top;
 	}
 
 	.styles-list__item:hover .styles-list__button {
@@ -309,6 +309,7 @@
 
 	.styles-list__button.rotated {
 		transform: rotate(-135deg);
+		top: 10px;
 	}
 
 	.artist-dropdown {
