@@ -104,7 +104,7 @@ $(function() {
 
 	// gallery
 
-	let mySwiper = new Swiper('.swiper-container', {
+	let gallerySwiper = new Swiper('.swiper-container', {
     navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
@@ -139,4 +139,11 @@ $(function() {
 	// 		$('.selectric-selectric-top .selectric').css('border-radius', '6px')
 	// 	}
 	// });
+
+	// catalog
+
+	$("#accordion").accordion({
+		collapsible: true,
+		heightStyle: "content"
+	});
 });

@@ -1,0 +1,79 @@
+.catalog {
+	padding-top: 80px;
+}
+
+.catalog__heading {
+	margin-bottom: 20px;
+}
+
+.flags {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 14px;
+}
+
+.flags__item {
+	width: 44px;
+	height: 44px;
+	padding: 6px;
+	border-radius: 50%;
+	transition-property: box-shadow;
+	transition-duration: 0.3s;
+}
+
+.flags__item:first-child {
+	margin-left: -6px;
+}
+
+.flags__item:last-child {
+	margin-right: -6px;
+}
+
+.flags__button {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	border: none;
+	transition-property: box-shadow;
+	transition-duration: 0.3s;
+}
+
+.flags__button_france {
+	background-image: url(../img/france.png);
+}
+
+.flags__button_germany {
+	background-image: url(../img/germany.png);
+}
+
+.flags__button_italy {
+	background-image: url(../img/italy.png);
+}
+
+.flags__button_russia {
+	background-image: url(../img/russia.png);
+}
+
+.flags__button_belgium {
+	background-image: url(../img/belgium.png);
+}
+
+.flags__button:hover {
+	box-shadow: 0 0 20px 0 rgba(157, 92, 208, 0.7);
+}
+
+.flags__button:active,
+.flags__item:focus-within {
+	box-shadow: 0 0 0 2px var(--purple) inset;
+}
+
+.artists-catalog {
+	border-top: 1px solid #cacaca;
+}
+
+.artists-catalog__heading {
+	border: none;
+	border-bottom: 1px solid #cacaca;
+	border-radius: 0;
+	background-color: transparent;
+}
