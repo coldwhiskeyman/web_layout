@@ -1,9 +1,14 @@
 .catalog {
 	padding-top: 83px;
+	padding-bottom: 50px;
 }
 
 .catalog__heading {
 	margin-bottom: 10px;
+}
+
+.catalog__text {
+	display: none;
 }
 
 .flags {
@@ -68,7 +73,8 @@
 }
 
 .artists-catalog {
-	border-top: 1px solid #cacaca;
+	border-top: 1px solid var(--light-grey);
+	margin-bottom: 50px;
 }
 
 .artists-catalog__heading {
@@ -81,7 +87,7 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 21px 0 22px;
-	border-bottom: 1px solid #cacaca;
+	border-bottom: 1px solid var(--light-grey);
 	outline: none;
 }
 
@@ -136,4 +142,209 @@
 
 .artists-catalog__link:active {
 	color: var(--dark-purple);
+}
+
+.artist-details__picture {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.artist-details__img {
+	width: 100%;
+}
+
+.artist-details__heading {
+	margin-bottom: 18px;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.artist-details__subtext {
+	margin-bottom: 8px;
+	font-size: 12px;
+	color: var(--light-grey);
+}
+
+.artist-details__text {
+	line-height: 2;
+}
+
+@media(min-width: 768px) {
+	.catalog {
+		padding-bottom: 80px;
+	}
+
+	.catalog__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 12px;
+	}
+
+	.catalog__heading {
+		margin-bottom: 0;
+	}
+
+	.catalog__text {
+		display: block;
+		line-height: 2;
+		margin-bottom: 20px;
+	}
+
+	.flags {
+		width: 446px;
+		margin-bottom: 0;
+		align-self: flex-end;
+	}
+
+	.flags__item {
+		width: 66px;
+		height: 66px;
+		padding: 10px;
+	}
+
+	.flags__item:first-child {
+		margin-left: -10px;
+	}
+
+	.flags__item:last-child {
+		margin-right: -10px;
+	}
+
+	.flags__button {
+		width: 46px;
+		height: 46px;
+	}
+
+	.flags__button_france {
+		background-image: url(../img/france-large.png);
+	}
+
+	.flags__button_germany {
+		background-image: url(../img/germany-large.png);
+	}
+
+	.flags__button_italy {
+		background-image: url(../img/italy-large.png);
+	}
+
+	.flags__button_russia {
+		background-image: url(../img/russia-large.png);
+	}
+
+	.flags__button_belgium {
+		background-image: url(../img/belgium-large.png);
+	}
+
+	.artists-catalog__subsection {
+		padding: 32px 0 31px;
+	}
+
+	.artists-catalog__heading {
+		font-size: 24px;
+		padding-bottom: 7px;
+	}
+
+	.artists-catalog__btn {
+		width: 50px;
+		height: 50px;
+	}
+
+	.artists-catalog__btn::after {
+		top: 18px;
+		right: 18px;
+		width: 12px;
+		height: 12px;
+	}
+
+	.artists-catalog__subsection.ui-state-active .artists-catalog__btn::after {
+		top: 20px;
+		transform: rotate(135deg);
+	}
+
+	.artists-catalog__list {
+		padding: 32px 0 32px;
+		columns: 3;
+		column-gap: 34px;
+	}
+
+	.artist-details__picture {
+		margin-bottom: 30px;
+	}
+
+	.artist-details__heading {
+		margin-bottom: 13px;
+	}
+
+}
+
+@media(min-width: 1024px) {
+	.catalog {
+		padding-top: 89px;
+	}
+
+	.catalog__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.catalog__header {
+		margin-bottom: 6px;
+	}
+
+	.catalog__heading {
+		margin-right: 40px;
+	}
+
+	.flags {
+		width: 430px;
+	}
+
+	.catalog__text {
+		margin-bottom: 39px;
+	}
+
+	.artists-catalog {
+		order: 4;
+		flex-basis: 47%;
+	}
+
+	.artist-details {
+		order: 3;
+		flex-basis: 47%;
+		margin-right: 50px;
+	}
+
+	.artists-catalog__list {
+		columns: 2;
+		column-gap: 40px;
+	}
+}
+
+@media(min-width: 1650px) {
+	.catalog {
+		padding-top: 82px;
+	}
+
+	.catalog__header {
+		margin-bottom: 12px;
+	}
+
+	.catalog__text {
+		max-width: 1080px;
+	}
+
+	.artists-catalog {
+		flex-basis: 800px;
+	}
+
+	.artist-details {
+		flex-basis: 750px;
+	}
+
+	.artists-catalog__list {
+		columns: 3;
+		column-gap: 50px;
+	}
 }

@@ -264,15 +264,22 @@
 		</section>
 
 		<section class="catalog">
-			<div class="container">
-				<h2 class="heading catalog__heading text-block-reset">Каталог</h2>
-				<ul class="flags ul-reset">
-					<li class="flags__item"><button class="flags__button flags__button_france link-reset" aria-label="Франция"></button></li>
-					<li class="flags__item"><button class="flags__button flags__button_germany link-reset" aria-label="Германия"></button></li>
-					<li class="flags__item"><button class="flags__button flags__button_italy link-reset" aria-label="Италия"></button></li>
-					<li class="flags__item"><button class="flags__button flags__button_russia link-reset" aria-label="Россия"></button></li>
-					<li class="flags__item"><button class="flags__button flags__button_belgium link-reset" aria-label="Бельгия"></button></li>
-				</ul>
+			<div class="container catalog__container">
+				<div class="catalog__header">
+					<h2 class="heading catalog__heading text-block-reset">Каталог</h2>
+					<ul class="flags ul-reset">
+						<li class="flags__item"><button class="flags__button flags__button_france link-reset" aria-label="Франция"></button></li>
+						<li class="flags__item"><button class="flags__button flags__button_germany link-reset" aria-label="Германия"></button></li>
+						<li class="flags__item"><button class="flags__button flags__button_italy link-reset" aria-label="Италия"></button></li>
+						<li class="flags__item"><button class="flags__button flags__button_russia link-reset" aria-label="Россия"></button></li>
+						<li class="flags__item"><button class="flags__button flags__button_belgium link-reset" aria-label="Бельгия"></button></li>
+					</ul>
+				</div>
+				<p class="catalog__text text-block-reset">
+					Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры,
+					 будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить
+					 традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
+				</p>
 				<div class="artists-catalog" id="accordion">
 					<div class="artists-catalog__subsection">
 						<h3 class="artists-catalog__heading text-block-reset">C 1400 по 1499 гг.</h3>
@@ -498,6 +505,20 @@
 							<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#">Пинтуриккьо</a></li>
 						</ul>
 					</div>
+				</div>
+				<div class="artist-details">
+					<picture class="artist-details__picture">
+						<source media="(min-width: 1650px)" srcset="img/catalog-pic-desktop.jpg">
+						<source media="(min-width: 768px)" srcset="img/catalog-pic-tablet.jpg">
+						<img class="artist-details__img" src="img/catalog-pic-mobile.jpg" alt="Картина выбранного художника">
+					</picture>
+					<h3 class="artist-details__heading text-block-reset">Доменико Гирландайо</h3>
+					<p class="artist-details__subtext text-block-reset">2 июня 1448 — 11 января 1494.</p>
+					<p class="artist-details__text text-block-reset">
+						Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
+						Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло,
+						со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
+					</p>
 				</div>
 			</div>
 		</section>
