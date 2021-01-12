@@ -318,7 +318,7 @@
 		width: 300px;
 		height: 300px;
 		padding: 40px 20px 40px 40px;
-		background-color: #444c;
+		background-color: rgba(0, 0, 0, 0.4);
 		transition-duration: 0.3s;
 	}
 
