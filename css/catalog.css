@@ -80,6 +80,13 @@
 .artists-catalog__heading {
 	color: var(--dark-grey);
 	font-size: 18px;
+	outline: none;
+	padding: 0 4px;
+	margin-left: -4px;
+}
+
+.artists-catalog__heading:active {
+	color: var(--purple);
 }
 
 .artists-catalog__subsection {
@@ -117,6 +124,19 @@
 .artists-catalog__subsection.ui-state-active .artists-catalog__btn::after {
 	top: 13px;
 	transform: rotate(135deg);
+}
+
+.artists-catalog__btn:hover {
+	background-color: var(--purple);
+}
+
+.artists-catalog__btn:hover::after {
+	border-color: var(--white);
+}
+
+.artists-catalog__btn:active {
+	background-color: var(--dark-purple);
+	box-shadow: 0 0 0 2px var(--light-purple);
 }
 
 .artists-catalog__list {
