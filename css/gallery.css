@@ -25,6 +25,10 @@
 	height: 367px;
 }
 
+.gallery__slide:hover {
+	cursor: pointer;
+}
+
 .gallery__img {
 	width: auto;
 	height: 100%;
@@ -108,10 +112,19 @@
 
 .paragraph__link {
 	color: var(--light-purple);
+	background-image: none;
+	background-position: 0 1.2em;
+	background-repeat: no-repeat;
+	background-size: 100% 1px;
+	background-clip: content-box;
 }
 
 .paragraph__link:hover {
-	text-decoration: underline;
+	background-image: linear-gradient(var(--light-purple) 0%, var(--light-purple) 100%);
+}
+
+.paragraph__link:active {
+	background-image: linear-gradient(var(--dark-purple) 0%, var(--dark-purple) 100%);
 }
 
 @media(min-width: 768px) {

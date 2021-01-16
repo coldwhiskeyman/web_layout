@@ -142,10 +142,15 @@ $(function() {
 
 	// catalog
 
-	$("#accordion").accordion({
+	$(".artists-catalog").accordion({
 		collapsible: true,
 		active: false,
 		icons: false,
 		heightStyle: "content",
+	});
+
+	$("#tabs").tabs({
+		hide: "slide",
+		show: "slide"
 	});
 });
