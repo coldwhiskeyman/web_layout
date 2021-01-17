@@ -144,13 +144,20 @@ $(function() {
 
 	$(".artists-catalog").accordion({
 		collapsible: true,
-		active: false,
 		icons: false,
 		heightStyle: "content",
 	});
 
 	$("#tabs").tabs({
 		hide: "slide",
-		show: "slide"
+		show: "slide",
+		active: 2
+	});
+
+	$('.flags__button').on('mousedown', function() {
+		$('.flags').find('.active').removeClass('active');
+	});
+	$('.flags__button').on('mouseup', function() {
+		$(this).parent().addClass('active');
 	});
 });
