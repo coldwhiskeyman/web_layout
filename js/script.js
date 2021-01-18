@@ -163,9 +163,32 @@ $(function() {
 
 	// events
 
-	let eventsSwiper = new Swiper('.events-swiper', {
-		pagination: {
-			el: '.events-swiper__pagination',
-		},
+	const breakpoint = window.matchMedia( '(min-width:768px)' );
+	let eventsSwiper;
+
+	const breakpointChecker = function() {
+		if ( breakpoint.matches === true ) {
+			 if ( eventsSwiper !== undefined ) eventsSwiper.destroy( true, true );
+			 return;
+		} else if ( breakpoint.matches === false ) {
+			 return enableSwiper();
+		}
+  };
+
+	const enableSwiper = function() {
+		eventsSwiper = new Swiper('.events-swiper', {
+			pagination: {
+				el: '.events-swiper__pagination',
+			},
+		});
+  };
+
+	breakpoint.addEventListener('change', breakpointChecker);
+	breakpointChecker();
+
+	$('.events-enable-btn').on('click', function() {
+		$('.event-card_third').show('slide');
+		$('.event-card_last').show('slide');
+		$('.events-enable-btn').fadeOut();
 	});
 });

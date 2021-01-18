@@ -8,6 +8,7 @@
 
 .event-card {
 	box-sizing: border-box;
+	height: 683px;
 	margin-bottom: 25px;
 	padding-bottom: 55px;
 	border: 1px solid var(--light-grey);
@@ -15,7 +16,14 @@
 
 .event-card__picture {
 	display: block;
+	width: 100%;
+	max-height: 350px;
+	overflow: hidden;
 	margin-bottom: 12px;
+}
+
+.event-card__img {
+	width: 100%;
 }
 
 .event-card__small-text {
@@ -28,15 +36,22 @@
 }
 
 .event-card__heading {
-	margin: 0 10px 37px 27px;
 	font-size: 24px;
 	line-height: 1.3em;
 	letter-spacing: 0.95;
 	color: var(--dark-grey);
 }
 
+.event-card__text-wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 327px;
+	margin: 0 10px 30px 27px;
+}
+
 .event-card__text {
-	margin: 0 27px 33px;
+	padding-right: 17px;
 	line-height: 2;
 }
 
@@ -63,4 +78,107 @@
 
 .swiper-pagination-bullet-active {
 	background-color: #666;
+}
+
+.events-enable-btn {
+	display: none;
+}
+
+@media(min-width: 768px) {
+	.events__heading {
+		margin-bottom: 20px;
+	}
+
+	.events-swiper {
+		margin-bottom: 16px;
+	}
+
+	.events-swiper__wrapper {
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.event-card {
+		flex-basis: 47%;
+		margin-bottom: 35px;
+	}
+
+	.event-card__picture {
+		max-height: 200px;
+	}
+
+	.events-swiper__pagination {
+		display: none;
+	}
+
+	.events-enable-btn {
+		display: block;
+		min-width: 188px;
+		margin: 0 auto;
+		padding: 17px;
+		background-color: transparent;
+		border: 2px solid var(--purple);
+		border-radius: 30px;
+		font-size: 18px;
+		font-weight: 700;
+		color: var(--purple);
+	}
+
+	.event-card_third,
+	.event-card_last {
+		display: none;
+	}
+}
+
+@media(min-width: 1024px) {
+	.events-swiper__wrapper {
+		justify-content: flex-start;
+	}
+
+	.event-card {
+		flex-basis: 31%;
+	}
+
+	.event-card:not(:nth-child(3n)) {
+		margin-right: 32px;
+	}
+
+	.event-card_third {
+		display: block;
+	}
+}
+
+@media(min-width: 1650px) {
+	.event-card {
+		flex-basis: 500px;
+		height: 700px;
+		margin-bottom: 50px;
+	}
+
+	.event-card:not(:nth-child(3n)) {
+		margin-right: 50px;
+	}
+
+	.event-card__picture {
+		max-height: 300px;
+		margin-bottom: 14px;
+	}
+
+	.event-card__small-text {
+		margin-right: 17px;
+	}
+
+	.event-card__text-wrap {
+		justify-content: flex-start;
+		height: 260px;
+		margin: 0 30px 23px 50px;
+	}
+
+	.event-card__text {
+		padding-right: 20px;
+	}
+
+	.event-card__link {
+		margin-left: 50px;
+	}
 }
