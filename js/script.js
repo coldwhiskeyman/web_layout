@@ -104,13 +104,13 @@ $(function() {
 
 	// gallery
 
-	let gallerySwiper = new Swiper('.swiper-container', {
+	let gallerySwiper = new Swiper('.gallery-swiper', {
     navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.gallery-swiper__button-next',
+			prevEl: '.gallery-swiper__button-prev',
 		},
 		pagination: {
-			el: '.swiper-pagination',
+			el: '.gallery-swiper__pagination',
 			type: 'fraction',
 		},
 
@@ -159,5 +159,13 @@ $(function() {
 	});
 	$('.flags__button').on('mouseup', function() {
 		$(this).parent().addClass('active');
+	});
+
+	// events
+
+	let eventsSwiper = new Swiper('.events-swiper', {
+		pagination: {
+			el: '.events-swiper__pagination',
+		},
 	});
 });

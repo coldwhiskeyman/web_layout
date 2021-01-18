@@ -1,6 +1,6 @@
 .catalog {
 	padding-top: 83px;
-	padding-bottom: 50px;
+	padding-bottom: 54px;
 }
 
 .catalog__heading {
@@ -188,7 +188,7 @@
 .artist-details__subtext {
 	margin-bottom: 8px;
 	font-size: 12px;
-	color: var(--light-grey);
+	color: var(--grey);
 }
 
 .artist-details__text {
