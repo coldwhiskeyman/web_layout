@@ -1,4 +1,5 @@
 database = {
+	// italy
 	girlandaio: {
 		name: "Доменико Гирландайо",
 		lifetime: "2 июня 1448 — 11 января 1494.",
@@ -10,6 +11,61 @@ database = {
 		tabletImage: "img/catalog/girlandaio-tablet.jpg",
 		mobileImage: "img/catalog/girlandaio-mobile.jpg"
 	},
+	verrocchio: {
+		name: "Андреа Верроккьо",
+		lifetime: "1435 — 10 октября 1488.",
+		bio: "Андреа дель Верроккьо, наст. имя Андреа ди Микеле Чони — скульптор и живописец эпохи Возрождения, представитель Флорентийской школы. \
+		Среди его учеников — Сандро Боттичелли, Пьетро Перуджино, Леонардо да Винчи и Лоренцо ди Креди.",
+		desktopImage: "img/catalog/verrocchio-desktop.jpg",
+		tabletImage: "img/catalog/verrocchio-tablet.jpg",
+		mobileImage: "img/catalog/verrocchio-mobile.jpg"
+	},
+	bergognone: {
+		name: "Амброджо Бергоньоне",
+		lifetime: "1453 — 1523.",
+		bio: "Амброджо Бергоньоне или Боргоньоне, настоящее имя — Амброджо да Фоссано — итальянский художник ломбардской школы. \
+		Прозвище говорит о его тяготении к бургундской школе, по манере ему близок Винченцо Фоппа. Испытал влияние Леонардо да Винчи. \
+		Наиболее известен работами 1486—1494 в монастырской обители картезианцев Чертоза ди Павия. Позднее работал в Милане в базилике \
+		Сант-Эусторджо и церкви Сан-Сатиро, после 1497 — в Лоди, в 1512 — в Бергамо, незадолго до смерти — снова в Милане, в базилике Сан-Симпличано. \
+		Его завещание датировано 4 апреля 1523, в том же году он умер. Одним из его учеников считают Бернардино Луини.",
+		desktopImage: "img/catalog/bergognone-desktop.jpg",
+		tabletImage: "img/catalog/bergognone-tablet.jpg",
+		mobileImage: "img/catalog/bergognone-mobile.jpg"
+	},
+	diBindo: {
+		name: "Бенедетто ди Биндо",
+		lifetime: "1380—85 — 19 сентября 1417.",
+		bio: "Бенедетто ди Биндо — итальянский художник сиенской школы. Бенедетто ди Биндо остался в истории искусства как сиенский художник, \
+		так сказать, «второго ряда», несмотря на то, что за свою короткую жизнь он выполнил ряд весьма престижных заказов, включая работы в \
+		Сиенском соборе (работы в главном соборе республики второстепенным художникам не поручались). Обучение он прошёл у Таддео ди Бартоло, \
+		крупного сиенского мастера поздней готики, в боттеге которого Бенедетто трудился вместе с Грегорио ди Чекко. Наибольшее влияние \
+		на его творчество оказали работы Симоне Мартини, в частности в выборе колорита, а тонко проработанные лица его персонажей \
+		напоминают произведения Джованни да Милано.",
+		desktopImage: "img/catalog/diBindo-desktop.jpg",
+		tabletImage: "img/catalog/diBindo-tablet.jpg",
+		mobileImage: "img/catalog/diBindo-mobile.jpg"
+	},
+	giorgione: {
+		name: "Джорджоне",
+		lifetime: "1477/1478 — 1510",
+		bio: "Джорджо Барбарелли да Кастельфранко, более известный как Джорджоне — итальянский художник, представитель венецианской школы живописи; \
+		один из величайших мастеров Высокого Возрождения.",
+		desktopImage: "img/catalog/giorgione-desktop.jpg",
+		tabletImage: "img/catalog/giorgione-tablet.jpg",
+		mobileImage: "img/catalog/giorgione-mobile.jpg"
+	},
+	parentino: {
+		name: "Бернардо Парентино",
+		lifetime: "1450 — 1500",
+		bio: "Бернардо Парентино — итальянский художник эпохи Ренессанса. В основном работал в Падуе. Родился в городе Паренцо, \
+		принадлежащем венецианской республике и находящимся на побережье полуострова Истрия. Там же, вероятнее всего, получил начальное образование. \
+		Умер в городе Виченца. Испытал сильное влияние, а возможно и был учеником Андреа Мантеньи. Также художник известен под именами Бернардо Паренцано, \
+		Бернардо да Паренцо, Бернардино Парентино. Ошибочно отождествлялся с августинским монахом Лоренцо.",
+		desktopImage: "img/catalog/parentino-desktop.jpg",
+		tabletImage: "img/catalog/parentino-tablet.jpg",
+		mobileImage: "img/catalog/parentino-mobile.jpg"
+	},
+	// france
 	monet: {
 		name: "Клод Моне",
 		lifetime: "14 ноября 1840 — 5 декабря 1926.",
@@ -61,6 +117,7 @@ database = {
 		tabletImage: "img/catalog/picasso-tablet.jpg",
 		mobileImage: "img/catalog/picasso-mobile.jpg"
 	},
+	// germany
 	durer: {
 		name: "Альбрехт Дюрер",
 		lifetime: "21 мая 1471 — 6 апреля 1528.",
@@ -74,6 +131,7 @@ database = {
 		tabletImage: "img/catalog/durer-tablet.jpg",
 		mobileImage: "img/catalog/durer-mobile.jpg"
 	},
+	// russia
 	aivazovsky: {
 		name: "Иван Айвазовский",
 		lifetime: "17 июля 1817 — 19 апреля 1900.",
@@ -128,6 +186,7 @@ database = {
 		tabletImage: "img/catalog/malevich-tablet.jpg",
 		mobileImage: "img/catalog/malevich-mobile.jpg"
 	},
+	// belgium
 	magritte: {
 		name: "Рене Магритт",
 		lifetime: "21 ноября 1898 — 15 августа 1967.",

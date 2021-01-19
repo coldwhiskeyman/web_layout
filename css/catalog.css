@@ -264,6 +264,7 @@
 
 	.artists-catalog__subsection {
 		padding: 32px 0 31px;
+		cursor: pointer;
 	}
 
 	.artists-catalog__heading {

@@ -132,7 +132,7 @@ $(function() {
 		}
 	});
 
-	$('.selectric').selectric();
+	$('.selectric').selectric({ disableOnMobile: false, nativeOnMobile: false });
 
 	// $('.selectric').on('mouseover click', function() {
 	// 	if ($('.selectric-selectric-middle').hasClass('.selectric-hover')) {
