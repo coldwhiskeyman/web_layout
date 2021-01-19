@@ -159,6 +159,12 @@
 	background-repeat: no-repeat;
 	background-size: 100% 1px;
 	background-clip: content-box;
+	transition-property: font-weight;
+}
+
+.artists-catalog__link.selected {
+	font-weight: 700;
+	color: var(--purple);
 }
 
 .artists-catalog__link:hover {

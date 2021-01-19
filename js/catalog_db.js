@@ -201,6 +201,7 @@ database = {
 }
 
 function changeArtist(artistId) {
+	$('.artists-catalog__link.selected').removeClass('selected')
 	$('.artist-details').fadeOut(300, function() {
 		artist = database[artistId];
 		$(".artist-details__heading").text(artist.name);
@@ -209,6 +210,7 @@ function changeArtist(artistId) {
 		$('.artist-details__picture > source[media="(min-width: 1650px)"]').attr('srcset', artist.desktopImage);
 		$('.artist-details__picture > source[media="(min-width: 768px)"]').attr('srcset', artist.tabletImage);
 		$('.artist-details__img').attr('src', artist.mobileImage);
+		$('#' + artistId).addClass('selected')
 		$('.artist-details').fadeIn(300);
 	});
 }
