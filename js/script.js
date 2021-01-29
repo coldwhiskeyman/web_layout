@@ -191,4 +191,19 @@ $(function() {
 		$('.event-card_last').show('slide');
 		$('.events-enable-btn').fadeOut();
 	});
+
+	// publications
+
+	if ($(window).width() < 768) {
+		console.log('yo')
+		$('.categories-fieldset__legend').on('click', function() {
+			$('.categories-fieldset__checkbox').each(function() {
+				if ($(this).css('display') === 'none') {
+					$(this).show('slidedown');
+				} else if (!$(this).find('.checkbox__input').is(':checked')) {
+					$(this).hide('slidedown');
+				};
+			});
+		});
+	};
 });
