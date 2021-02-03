@@ -101,6 +101,10 @@
 }
 
 @media(min-width: 768px) {
+	.events {
+		padding-bottom: 85px;
+	}
+
 	.events__heading {
 		margin-bottom: 20px;
 	}

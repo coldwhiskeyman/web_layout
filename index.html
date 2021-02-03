@@ -669,77 +669,88 @@
 				<form class="publications-form" action="#">
 					<fieldset class="categories-fieldset">
 						<legend class="categories-fieldset__legend">Категории</legend>
-						<label class="categories-fieldset__checkbox checkbox">
-							<input class="checkbox__input" type="checkbox">
-							<span class="checkbox__box"></span>
-							Бестселлеры
-						</label>
-						<label class="categories-fieldset__checkbox checkbox">
-							<input class="checkbox__input" type="checkbox">
-							<span class="checkbox__box"></span>
-							Искусство
-						</label>
-						<label class="categories-fieldset__checkbox checkbox">
-							<input class="checkbox__input" type="checkbox">
-							<span class="checkbox__box"></span>
-							Архитектура
-						</label>
-						<label class="categories-fieldset__checkbox checkbox active">
-							<input class="checkbox__input" type="checkbox" checked>
-							<span class="checkbox__box"></span>
-							Дизайн
-						</label>
-						<label class="categories-fieldset__checkbox checkbox">
-							<input class="checkbox__input" type="checkbox">
-							<span class="checkbox__box"></span>
-							Мода
-						</label>
-						<label class="categories-fieldset__checkbox checkbox">
-							<input class="checkbox__input" type="checkbox">
-							<span class="checkbox__box"></span>
-							Детям
-						</label>
-						<label class="categories-fieldset__checkbox checkbox">
-							<input class="checkbox__input" type="checkbox">
-							<span class="checkbox__box"></span>
-							Художественная литература
-						</label>
-						<label class="categories-fieldset__checkbox checkbox">
-							<input class="checkbox__input" type="checkbox">
-							<span class="checkbox__box"></span>
-							Публицистика
-						</label>
-						<label class="categories-fieldset__checkbox checkbox">
-							<input class="checkbox__input" type="checkbox">
-							<span class="checkbox__box"></span>
-							Путеводители
-						</label>
-						<label class="categories-fieldset__checkbox checkbox">
-							<input class="checkbox__input" type="checkbox">
-							<span class="checkbox__box"></span>
-							Философия
-						</label>
-						<label class="categories-fieldset__checkbox checkbox">
-							<input class="checkbox__input" type="checkbox">
-							<span class="checkbox__box"></span>
-							Учебная литература
-						</label>
-						<label class="categories-fieldset__checkbox checkbox">
-							<input class="checkbox__input" type="checkbox">
-							<span class="checkbox__box"></span>
-							Журналы и газеты
-						</label>
+						<div class="categories-fieldset__column">
+							<label class="categories-fieldset__checkbox checkbox">
+								<input class="checkbox__input" type="checkbox">
+								<span class="checkbox__box"></span>
+								Бестселлеры
+							</label>
+							<label class="categories-fieldset__checkbox checkbox">
+								<input class="checkbox__input" type="checkbox">
+								<span class="checkbox__box"></span>
+								Искусство
+							</label>
+							<label class="categories-fieldset__checkbox checkbox">
+								<input class="checkbox__input" type="checkbox">
+								<span class="checkbox__box"></span>
+								Архитектура
+							</label>
+							<label class="categories-fieldset__checkbox checkbox active">
+								<input class="checkbox__input" type="checkbox" checked>
+								<span class="checkbox__box"></span>
+								Дизайн
+							</label>
+						</div>
+						<div class="categories-fieldset__column">
+							<label class="categories-fieldset__checkbox checkbox">
+								<input class="checkbox__input" type="checkbox">
+								<span class="checkbox__box"></span>
+								Мода
+							</label>
+							<label class="categories-fieldset__checkbox checkbox">
+								<input class="checkbox__input" type="checkbox">
+								<span class="checkbox__box"></span>
+								Детям
+							</label>
+							<label class="categories-fieldset__checkbox checkbox">
+								<input class="checkbox__input" type="checkbox">
+								<span class="checkbox__box"></span>
+								Художественная литература
+							</label>
+							<label class="categories-fieldset__checkbox checkbox">
+								<input class="checkbox__input" type="checkbox">
+								<span class="checkbox__box"></span>
+								Публицистика
+							</label>
+						</div>
+						<div class="categories-fieldset__column">
+							<label class="categories-fieldset__checkbox checkbox">
+								<input class="checkbox__input" type="checkbox">
+								<span class="checkbox__box"></span>
+								Путеводители
+							</label>
+							<label class="categories-fieldset__checkbox checkbox">
+								<input class="checkbox__input" type="checkbox">
+								<span class="checkbox__box"></span>
+								Философия
+							</label>
+							<label class="categories-fieldset__checkbox checkbox">
+								<input class="checkbox__input" type="checkbox">
+								<span class="checkbox__box"></span>
+								Учебная литература
+							</label>
+							<label class="categories-fieldset__checkbox checkbox">
+								<input class="checkbox__input" type="checkbox">
+								<span class="checkbox__box"></span>
+								Журналы и газеты
+							</label>
+						</div>
 					</fieldset>
-					<fieldset>
-						<legend>Цена</legend>
-						<div>
-							<label>От<input type="text"></label>
-							<label>до<input type="text"></label>
+					<fieldset class="price-fieldset">
+						<legend class="price-fieldset__legend">Цена</legend>
+						<div class="price-fieldset__input-block">
+							<label>От<input class="price-fieldset__input" type="text" value="50"></label>
+							<label>до<input class="price-fieldset__input" type="text" value="25 000"></label>
 							руб.
 						</div>
 					</fieldset>
 				</form>
 				<div class="swiper-container publications-swiper">
+					<div class="pagination publications__pagination">
+						<div class="swiper-button-prev publications-swiper__button-prev pagination__button selectable link-reset"></div>
+						<div class="swiper-pagination publications-swiper__pagination"></div>
+						<div class="swiper-button-next publications-swiper__button-next pagination__button selectable link-reset"></div>
+					</div>
 					<div class="swiper-wrapper publications-swiper__wrapper">
 						<div class="swiper-slide publication-card">
 							<picture class="publication-card__picture">
@@ -747,10 +758,76 @@
 								<source media="(min-width: 768px)" srcset="img/publications/1-tablet.jpg">
 								<img class="publication-card__img" src="img/publications/1-mobile.jpg" alt="Искусство цвета">
 							</picture>
-							<h4>Искусство цвета</h4>
-							<p>Иттен, Иоханнес</p>
-							<p>620 руб</p>
-							<button>Заказать</button>
+							<h4 class="publication-card__heading text-block-reset">Искусство цвета</h4>
+							<p class="publication-card__author text-block-reset">Иттен, Иоханнес</p>
+							<p class="publication-card__price text-block-reset">620 руб</p>
+							<button class="publication-card__button link-reset">Заказать</button>
+						</div>
+						<div class="swiper-slide publication-card">
+							<picture class="publication-card__picture">
+								<source media="(min-width: 1650px)" srcset="img/publications/2-desktop.jpg">
+								<source media="(min-width: 768px)" srcset="img/publications/2-tablet.jpg">
+								<img class="publication-card__img" src="img/publications/2-mobile.jpg" alt="Типографика">
+							</picture>
+							<h4 class="publication-card__heading text-block-reset">Типографика</h4>
+							<p class="publication-card__author text-block-reset">Рудер, Эмиль</p>
+							<p class="publication-card__price text-block-reset">2 450 руб</p>
+							<button class="publication-card__button link-reset">Заказать</button>
+						</div>
+						<div class="swiper-slide publication-card">
+							<picture class="publication-card__picture">
+								<source media="(min-width: 1650px)" srcset="img/publications/3-desktop.jpg">
+								<source media="(min-width: 768px)" srcset="img/publications/3-tablet.jpg">
+								<img class="publication-card__img" src="img/publications/3-mobile.jpg" alt="Книга про буквы">
+							</picture>
+							<h4 class="publication-card__heading text-block-reset">Книга про буквы</h4>
+							<p class="publication-card__author text-block-reset">Гордон, Юрий</p>
+							<p class="publication-card__price text-block-reset">2 200 руб</p>
+							<button class="publication-card__button link-reset">Заказать</button>
+						</div>
+						<div class="swiper-slide publication-card">
+							<picture class="publication-card__picture">
+								<source media="(min-width: 1650px)" srcset="img/publications/4-desktop.jpg">
+								<source media="(min-width: 768px)" srcset="img/publications/4-tablet.jpg">
+								<img class="publication-card__img" src="img/publications/4-mobile.jpg" alt="Николай Ильин">
+							</picture>
+							<h4 class="publication-card__heading text-block-reset">Николай Ильин</h4>
+							<p class="publication-card__author text-block-reset">Кричевский, Влади...</p>
+							<p class="publication-card__price text-block-reset">1 100 руб</p>
+							<button class="publication-card__button link-reset">Заказать</button>
+						</div>
+						<div class="swiper-slide publication-card">
+							<picture class="publication-card__picture">
+								<source media="(min-width: 1650px)" srcset="img/publications/5-desktop.jpg">
+								<source media="(min-width: 768px)" srcset="img/publications/5-tablet.jpg">
+								<img class="publication-card__img" src="img/publications/5-mobile.jpg" alt="Модульные сетки">
+							</picture>
+							<h4 class="publication-card__heading text-block-reset">Модульные сетки...</h4>
+							<p class="publication-card__author text-block-reset">Мюллер-Брокманн...</p>
+							<p class="publication-card__price text-block-reset">1 450 руб</p>
+							<button class="publication-card__button link-reset">Заказать</button>
+						</div>
+						<div class="swiper-slide publication-card">
+							<picture class="publication-card__picture">
+								<source media="(min-width: 1650px)" srcset="img/publications/6-desktop.jpg">
+								<source media="(min-width: 768px)" srcset="img/publications/6-tablet.jpg">
+								<img class="publication-card__img" src="img/publications/6-mobile.jpg" alt="Эволюция графических стилей">
+							</picture>
+							<h4 class="publication-card__heading text-block-reset">Эволюция графич...</h4>
+							<p class="publication-card__author text-block-reset">Хеллер, Чваст</p>
+							<p class="publication-card__price text-block-reset">3 200 руб</p>
+							<button class="publication-card__button link-reset">Заказать</button>
+						</div>
+						<div class="swiper-slide publication-card">
+							<picture class="publication-card__picture">
+								<source media="(min-width: 1650px)" srcset="img/publications/7-desktop.jpg">
+								<source media="(min-width: 768px)" srcset="img/publications/7-tablet.jpg">
+								<img class="publication-card__img" src="img/publications/7-mobile.jpg" alt="Искусство и визуальное восприятие">
+							</picture>
+							<h4 class="publication-card__heading text-block-reset">Искусство и визуа...</h4>
+							<p class="publication-card__author text-block-reset">Арнхейм, Рудольф</p>
+							<p class="publication-card__price text-block-reset">2 200 руб</p>
+							<button class="publication-card__button link-reset">Заказать</button>
 						</div>
 					</div>
 				</div>

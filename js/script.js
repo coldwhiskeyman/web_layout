@@ -114,7 +114,7 @@ $(function() {
 			type: 'fraction',
 		},
 
-		sldesPerView: 1,
+		slidesPerView: 1,
 		slidesPerColumn: 1,
 		spaceBetween: 15,
 
@@ -157,19 +157,19 @@ $(function() {
 
 	// events
 
-	const breakpoint = window.matchMedia( '(min-width:768px)' );
+	const eventsBreakpoint = window.matchMedia( '(min-width:768px)' );
 	let eventsSwiper;
 
-	const breakpointChecker = function() {
-		if ( breakpoint.matches === true ) {
+	const eventsBreakpointChecker = function() {
+		if ( eventsBreakpoint.matches === true ) {
 			 if ( eventsSwiper !== undefined ) eventsSwiper.destroy( true, true );
 			 return;
-		} else if ( breakpoint.matches === false ) {
-			 return enableSwiper();
+		} else if ( eventsBreakpoint.matches === false ) {
+			 return enableEventsSwiper();
 		}
   };
 
-	const enableSwiper = function() {
+	const enableEventsSwiper = function() {
 		eventsSwiper = new Swiper('.events-swiper', {
 			pagination: {
 				el: '.events-swiper__pagination',
@@ -177,8 +177,8 @@ $(function() {
 		});
   };
 
-	breakpoint.addEventListener('change', breakpointChecker);
-	breakpointChecker();
+	eventsBreakpoint.addEventListener('change', eventsBreakpointChecker);
+	eventsBreakpointChecker();
 
 	$('.events-enable-btn').on('click', function() {
 		$('.event-card_third').show('slide');
@@ -211,4 +211,35 @@ $(function() {
 			};
 		});
 	};
+
+
+	const publicationsBreakpoint = window.matchMedia( '(max-width:767px)' );
+	let publicationsSwiper;
+
+	const publicationsBreakpointChecker = function() {
+		if ( publicationsBreakpoint.matches === true ) {
+			 if ( publicationsSwiper !== undefined ) publicationsSwiper.destroy( true, true );
+			 return;
+		} else if ( publicationsBreakpoint.matches === false ) {
+			 return enablePublicationsSwiper();
+		}
+  };
+
+	const enablePublicationsSwiper = function() {
+		publicationsSwiper = new Swiper('.publications-swiper', {
+			navigation: {
+				nextEl: '.publications-swiper__button-next',
+				prevEl: '.publications-swiper__button-prev',
+			},
+			pagination: {
+				el: '.publications-swiper__pagination',
+				type: 'fraction',
+			},
+			slidesPerView: 2,
+			spaceBetween: 34,
+		});
+  };
+
+	publicationsBreakpoint.addEventListener('change', publicationsBreakpointChecker);
+	publicationsBreakpointChecker();
 });
