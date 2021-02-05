@@ -182,6 +182,7 @@
 @media(min-width: 768px) {
 	.publications {
 		padding-top: 85px;
+		padding-bottom: 80px;
 		background-image: url('../img/publications-bg-mobile.jpg');
 		background-size: cover;
 		color: var(--white);
@@ -248,6 +249,10 @@
 		top: 5px;
 	}
 
+	.publications-swiper {
+		width: 92%;
+	}
+
 	.publications-swiper__button-prev::after {
 		transform: rotate(45deg);
 		left: 12px;
@@ -260,10 +265,120 @@
 
 	.publications-swiper__wrapper {
 		flex-wrap: nowrap;
-		width: 92%;
+	}
+
+	.publication-card {
+		margin-bottom: 0;
 	}
 
 	.publication-card:nth-child(2n-1) {
 		margin-right: 0;
+	}
+
+	.publication-card__picture {
+		margin-bottom: 12px;
+	}
+
+	.publication-card__text-block {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 13px;
+	}
+
+	.publication-card__heading {
+		width: 70%;
+		margin-bottom: 4px;
+		font-size: 16px;
+	}
+
+	.publication-card__author {
+		font-size: 16px;
+		order: 3;
+	}
+
+	.publication-card__price {
+		width: 30%;
+		margin-bottom: 0;
+		text-align: right;
+		font-size: 16px;
+		order: 2;
+	}
+
+	.publication-card__button {
+		width: 120px;
+		padding: 9px;
+		font-size: 16px;
+	}
+}
+
+@media(min-width: 1024px) {
+	.publications {
+		height: 763px;
+	}
+
+	.publications .container {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		height: 598px;
+	}
+
+	.publications__heading {
+		width: fit-content;
+	}
+
+	.publications-form {
+		width: 295px;
+		margin: 0;
+	}
+
+	.categories-fieldset {
+		display: block;
+		width: fit-content;
+	}
+
+	.categories-fieldset__column:not(:last-child) {
+		margin-right: 0;
+		margin-bottom: 14px;
+	}
+
+	.publications__pagination {
+		padding-top: 29px;
+	}
+
+	.publications-swiper__button-prev::after,
+	.publications-swiper__button-next::after {
+		top: 40px;
+	}
+
+	.publications-swiper {
+		width: 68%;
+		margin: 0;
+	}
+}
+
+@media(min-width: 1650px) {
+	.publications {
+		height: 763px;
+		padding-bottom: 77px;
+	}
+
+	.publications .container {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		height: 601px;
+	}
+
+	.publications-form {
+		width: 450px;
+	}
+
+	.publications-swiper {
+		width: 1150px;
+	}
+
+	.publication-card__picture {
+		margin-bottom: 21px;
 	}
 }

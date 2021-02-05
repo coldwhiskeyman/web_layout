@@ -177,6 +177,14 @@
 }
 
 @media(min-width: 1650px) {
+	.events {
+		padding-bottom: 81px;
+	}
+
+	.events-swiper {
+		margin-bottom: 0;
+	}
+
 	.event-card {
 		flex-basis: 500px;
 		height: 700px;

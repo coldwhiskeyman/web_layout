@@ -237,6 +237,15 @@ $(function() {
 			},
 			slidesPerView: 2,
 			spaceBetween: 34,
+			breakpoints: {
+				1024: {
+					spaceBetween: 49,
+				},
+				1650: {
+					slidesPerView: 3,
+					spaceBetween: 50,
+				}
+			}
 		});
   };
 
