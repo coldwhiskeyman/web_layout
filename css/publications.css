@@ -183,7 +183,7 @@
 	.publications {
 		padding-top: 85px;
 		padding-bottom: 80px;
-		background-image: url('../img/publications-bg-mobile.jpg');
+		background-image: url('../img/publications-bg-768.jpg');
 		background-size: cover;
 		color: var(--white);
 	}
@@ -314,6 +314,7 @@
 @media(min-width: 1024px) {
 	.publications {
 		height: 763px;
+		background-image: url('../img/publications-bg-1024.jpg');
 	}
 
 	.publications .container {
@@ -361,6 +362,7 @@
 	.publications {
 		height: 763px;
 		padding-bottom: 77px;
+		background-image: url('../img/publications-bg-desktop.jpg');
 	}
 
 	.publications .container {
