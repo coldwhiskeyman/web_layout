@@ -49,9 +49,11 @@
 .categories-fieldset__checkbox {
 	display: none;
 	position: relative;
+	width: fit-content;
 	height: 0;
 	padding: 10px 0 10px 24px;
 	border-bottom: 1px solid #fff8;
+	cursor: pointer;
 	transition-property: height;
 	transition-duration: 0.3s;
 }
@@ -194,6 +196,9 @@
 
 	.categories-fieldset {
 		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		height: 160px;
 		margin-bottom: 39px;
 	}
 
@@ -305,7 +310,8 @@
 	}
 
 	.publication-card__button {
-		width: 120px;
+		width: fit-content;
+		min-width: 120px;
 		padding: 9px;
 		font-size: 16px;
 	}
@@ -336,6 +342,7 @@
 	.categories-fieldset {
 		display: block;
 		width: fit-content;
+		height: auto;
 	}
 
 	.categories-fieldset__column:not(:last-child) {
