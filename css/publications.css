@@ -51,10 +51,11 @@
 	position: relative;
 	width: fit-content;
 	height: 0;
-	padding: 10px 0 10px 24px;
+	margin-left: -4px;
+	padding: 10px 4px 10px 28px;
 	border-bottom: 1px solid #fff8;
 	cursor: pointer;
-	transition-property: height;
+	transition-property: height, color;
 	transition-duration: 0.3s;
 }
 
@@ -71,7 +72,7 @@
 	position: absolute;
 	width: 12px;
 	height: 12px;
-	left: 0;
+	left: 4px;
 	top: 13px;
 	border: 1px solid var(--white);
 	transition-property: border;
@@ -129,9 +130,14 @@
 	display: none;
 }
 
+.publications-swiper {
+	overflow-y: visible;
+}
+
 .publications-swiper__wrapper {
 	display: flex;
 	flex-wrap: wrap;
+	overflow-y: visible;
 }
 
 .publication-card {
@@ -179,6 +185,17 @@
 	background-color: transparent;
 	font-size: 12px;
 	font-weight: 700;
+	transition-property: background, border;
+	transition-duration: 0.3s;
+}
+
+.publication-card__button:hover {
+	background-color: var(--purple);
+}
+
+.publication-card__button:active {
+	background-color: var(--dark-purple);
+	border-color: var(--light-purple);
 }
 
 @media(min-width: 768px) {
@@ -219,7 +236,7 @@
 	.categories-fieldset__checkbox {
 		display: block;
 		height: auto;
-		padding: 0 0 0 24px;
+		padding: 0 4px 0 28px;
 		border: 0;
 	}
 
@@ -368,7 +385,7 @@
 @media(min-width: 1650px) {
 	.publications {
 		height: 763px;
-		padding-bottom: 77px;
+		padding-bottom: 73px;
 		background-image: url('../img/publications-bg-desktop.jpg');
 	}
 
@@ -376,7 +393,7 @@
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
-		height: 601px;
+		height: 605px;
 	}
 
 	.publications-form {
@@ -389,5 +406,25 @@
 
 	.publication-card__picture {
 		margin-bottom: 21px;
+	}
+
+	.publication-card__text-block {
+		margin-bottom: 9px;
+	}
+
+	.publication-card__button-wrap {
+		width: fit-content;
+		margin-left: -4px;
+		padding: 2px;
+		border: 2px solid transparent;
+		border-radius: 24px;
+	}
+
+	.publication-card__button-wrap:focus-within {
+		border-color: var(--light-purple);
+	}
+
+	.publication-card__button-wrap:focus-within:not(.focus-visible) {
+		border-color: transparent;
 	}
 }
