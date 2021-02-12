@@ -251,4 +251,31 @@ $(function() {
 
 	publicationsBreakpoint.addEventListener('change', publicationsBreakpointChecker);
 	publicationsBreakpointChecker();
+
+	// projects
+
+	let projectsSwiper = new Swiper('.projects-swiper', {
+    navigation: {
+			nextEl: '.projects-swiper__button-next',
+			prevEl: '.projects-swiper__button-prev',
+		},
+
+		slidesPerView: 1,
+		spaceBetween: 15,
+
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 34,
+			},
+			1024: {
+				slidesPerView: 2,
+				spaceBetween: 50,
+			},
+			1650: {
+				slidesPerView: 3,
+				spaceBetween: 50,
+			}
+		}
+	});
 });

@@ -1,0 +1,174 @@
+.projects {
+	padding-top: 53px;
+	padding-bottom: 50px;
+}
+
+.projects__heading {
+	margin-bottom: 15px;
+}
+
+.projects__paragraph {
+	margin-bottom: 15px;
+}
+
+.alert {
+	width: 16px;
+	height: 16px;
+	margin-bottom: -3px;
+}
+
+.paragraph__link {
+	font-weight: 600;
+	color: var(--purple);
+}
+
+.partners-heading {
+	margin-bottom: 17px;
+}
+
+.partners {
+	position: relative;
+}
+
+.projects-swiper {
+	width: 195px;
+	margin: 0 auto;
+}
+
+.projects-card {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 195px;
+	height: 65px;
+	padding: 15px;
+	border: 1px solid var(--light-grey);
+}
+
+.projects-card__img {
+	display: block;
+	max-width: 140px;
+	max-height: 35px;
+}
+
+.projects-swiper__button {
+	position: absolute;
+	top: 17px;
+	background-color: #ececec;
+}
+
+.projects-swiper__button-prev {
+	left: 0;
+}
+
+.projects-swiper__button-next {
+	right: 0;
+}
+
+.projects-swiper__button::after {
+	border-color: var(--black);
+}
+
+.projects-swiper__button-prev::after {
+	transform: rotate(45deg);
+	left: 12px;
+}
+
+.projects-swiper__button-next::after {
+	transform: rotate(-135deg);
+	right: 12px;
+}
+
+@media(min-width: 768px) {
+	.projects {
+		padding-top: 85px;
+		padding-bottom: 50px;
+	}
+
+	.projects__heading {
+		margin-bottom: 21px;
+	}
+
+	.projects__paragraph {
+		margin-bottom: 28px;
+	}
+
+	.partners-heading {
+		font-size: 24px;
+		margin-bottom: 32px;
+	}
+
+	.projects-swiper {
+		width: 562px;
+	}
+
+	.projects-card {
+		width: 264px;
+		height: 106px;
+		padding: 27px;
+	}
+
+	.projects-card__img {
+		max-width: 210px;
+		max-height: 52px;
+	}
+
+	.projects-swiper__button {
+		top: 38px;
+	}
+}
+
+@media(min-width: 1024px) {
+	.projects__paragraph {
+		margin-bottom: 22px;
+	}
+
+	.partners-heading {
+		margin-bottom: 26px;
+	}
+
+	.projects-swiper {
+		width: 818px;
+	}
+
+	.projects-card {
+		width: 384px;
+		height: 128px;
+		padding: 27px;
+	}
+
+	.projects-card__img {
+		max-width: 283px;
+		max-height: 72px;
+	}
+
+	.projects-swiper__button {
+		top: 49px;
+	}
+
+	@media(min-width: 1650px) {
+		.projects__paragraph {
+			max-width: 1080px;
+		}
+
+		.projects-swiper {
+			width: 1450px;
+		}
+
+		.projects-card {
+			width: 450px;
+			height: 150px;
+			padding: 32px;
+		}
+
+		.projects-card__img {
+			max-width: 330px;
+			max-height: 85px;
+		}
+
+		.projects-swiper__button {
+			top: 60px;
+		}
+	}
+}

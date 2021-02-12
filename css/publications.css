@@ -49,7 +49,7 @@
 .categories-fieldset__checkbox {
 	display: none;
 	position: relative;
-	width: fit-content;
+	width: 100%;
 	height: 0;
 	margin-left: -4px;
 	padding: 10px 4px 10px 28px;
@@ -235,6 +235,7 @@
 
 	.categories-fieldset__checkbox {
 		display: block;
+		width: fit-content;
 		height: auto;
 		padding: 0 4px 0 28px;
 		border: 0;
