@@ -20,8 +20,10 @@
 	background-image: url('../img/alert.svg');
 }
 
-.alert:hover {
+.alert:hover,
+.alert:focus {
 	background-image: url('../img/alert-hover.svg');
+	outline: none;
 }
 
 .alert::after {
@@ -51,7 +53,9 @@
 }
 
 .alert:hover::after,
-.alert:hover::before {
+.alert:hover::before,
+.alert:focus::after,
+.alert:focus::before {
 	display: block;
 }
 
@@ -96,10 +100,24 @@
 	border: 1px solid var(--light-grey);
 }
 
-.projects-card__img {
-	display: block;
+.projects-card:hover {
+	border: 1px solid #885BC7;
+}
+
+.projects-card__img,
+.projects-card__img_hover {
 	max-width: 140px;
 	max-height: 35px;
+}
+
+.projects-card__img,
+.projects-card:hover > .projects-card__img_hover {
+	display: block;
+}
+
+.projects-card__img_hover,
+.projects-card:hover > .projects-card__img {
+	display: none;
 }
 
 .projects-swiper__button {
