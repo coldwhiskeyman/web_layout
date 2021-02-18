@@ -13,14 +13,6 @@ $(function() {
 		}, 500);
 	};
 
-	$('body').keydown(function(e) {
-		focused = $(':focus');
-		if(e.which == 32){
-			e.preventDefault();
-			$(focused).click();
-		}
-	});
-
 	// burger menu
 
 	$('.burger').on('click', function() {

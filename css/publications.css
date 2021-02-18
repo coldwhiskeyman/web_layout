@@ -51,8 +51,7 @@
 	position: relative;
 	width: 100%;
 	height: 0;
-	margin-left: -4px;
-	padding: 10px 4px 10px 28px;
+	padding: 10px 4px;
 	border-bottom: 1px solid #fff8;
 	cursor: pointer;
 	transition-property: height, color;
@@ -65,40 +64,58 @@
 }
 
 .checkbox__input {
-	display: none;
+	position: absolute;
+  opacity: 0;
 }
 
-.checkbox__box {
-	position: absolute;
-	width: 12px;
+.checkbox__text {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+	padding: 0 4px;
+}
+
+.checkbox__text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 13px;
+  display: inline-block;
+  width: 12px;
 	height: 12px;
-	left: 4px;
-	top: 13px;
-	border: 1px solid var(--white);
+  border: 1px solid var(--white);
 	transition-property: border;
 	transition-duration: 0.3s;
 }
 
-.checkbox__box::after {
-	position: absolute;
-	top: 3px;
-	left: 3px;
-	content: '';
-	width: 4px;
+.checkbox__text::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 17px;
+  width: 4px;
 	height: 4px;
-	border-radius: 50%;
+  border-radius: 50%;
 	background-color: var(--light-purple);
-	opacity: 0;
+  opacity: 0;
 	transition-property: opacity;
 	transition-duration: 0.3s;
 }
 
-.checkbox__input:checked + .checkbox__box {
+.checkbox__input:checked + .checkbox__text::after {
+  opacity: 1;
+}
+
+.checkbox__input:checked + .checkbox__text::before {
 	border: 1px solid var(--light-purple);
 }
 
-.checkbox__input:checked + .checkbox__box::after {
-	opacity: 1;
+.checkbox__input:focus + .checkbox__text {
+  box-shadow: 0 0 0 2px var(--dark-purple);
+}
+
+.checkbox__input:focus:not(.focus-visible) + .checkbox__text {
+	box-shadow: none;
 }
 
 .price-fieldset__legend {
@@ -229,15 +246,11 @@
 		content: none;
 	}
 
-	.categories-fieldset__column:not(:last-child) {
-		margin-right: 55px;
-	}
-
 	.categories-fieldset__checkbox {
 		display: block;
 		width: fit-content;
 		height: auto;
-		padding: 0 4px 0 28px;
+		padding: 0 4px;
 		border: 0;
 	}
 
@@ -245,8 +258,12 @@
 		margin-bottom: 14px;
 	}
 
-	.checkbox__box {
+	.checkbox__text::before {
 		top: 3px;
+	}
+
+	.checkbox__text::after {
+		top: 7px;
 	}
 
 	.price-fieldset__legend {

@@ -104,20 +104,16 @@
 	border: 1px solid #885BC7;
 }
 
-.projects-card__img,
-.projects-card__img_hover {
+.projects-card__img {
 	max-width: 140px;
 	max-height: 35px;
+	filter: grayscale(100%);
+	transition-property: filter;
+	transition-duration: 0.3s;
 }
 
-.projects-card__img,
-.projects-card:hover > .projects-card__img_hover {
-	display: block;
-}
-
-.projects-card__img_hover,
 .projects-card:hover > .projects-card__img {
-	display: none;
+	filter: grayscale(0);
 }
 
 .projects-swiper__button {
