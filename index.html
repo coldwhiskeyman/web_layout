@@ -17,10 +17,12 @@
 	<link rel="stylesheet" href="css/events.css">
 	<link rel="stylesheet" href="css/publications.css">
 	<link rel="stylesheet" href="css/projects.css">
+	<link rel="stylesheet" href="css/contacts.css">
 	<link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font" type="font/woff2">
 	<link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-600.woff2" as="font" type="font/woff2">
 	<link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font" type="font/woff2">
 	<script src="js/swiper-bundle.min.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body class="body">
 	<header class="header">
@@ -848,6 +850,27 @@
 					</div>
 					<div class="swiper-button-prev projects-swiper__button-prev projects-swiper__button pagination__button selectable link-reset"></div>
 					<div class="swiper-button-next projects-swiper__button-next projects-swiper__button pagination__button selectable link-reset"></div>
+				</div>
+			</div>
+		</section>
+		<section class="contacts">
+			<div class="container contacts__container">
+				<h2 class="heading contacts__heading text-block-reset">Контакты</h2>
+				<div class="contacts__block">
+					<h3 class="contacts__subheading text-block-reset">Шоурум №2</h3>
+					<p class="contacts__subtext text-block-reset">Покровский бульвар, дом 24, строение 3</p>
+					<div id="map"></div>
+					<h3 class="contacts__form-heading text-block-reset">Заказать обратный звонок</h3>
+					<form class="contacts-form" action="#">
+						<input class="contacts-form__input" type="text" placeholder="Имя*">
+						<input class="contacts-form__input" type="tel" placeholder="Телефон*">
+						<input class="contacts-form__button selectable link-reset" type="submit" value="Заказать">
+					</form>
+					<h3 class="contacts__form-heading text-block-reset">Связаться в один клик</h3>
+					<ul class="social-list ul-reset">
+						<li class="social-list__item"><a href="#" class="social-list__link social-list__link_whatsapp" aria-label="Whatsapp"></a></li>
+						<li class="social-list__item"><a href="#" class="social-list__link social-list__link_telegram" aria-label="Telegram"></a></li>
+					</ul>
 				</div>
 			</div>
 		</section>

@@ -278,4 +278,27 @@ $(function() {
 			}
 		}
 	});
+
+	// contacts
+
+	ymaps.ready(init);
+	function init(){
+			var myMap = new ymaps.Map("map", {
+					center: [55.7531564, 37.6444161],
+					zoom: 15
+			});
+			var myGeoObject = new ymaps.GeoObject({
+					geometry: {
+							type: "Point", // тип геометрии - точка
+							coordinates: [55.7531564, 37.6444161] // координаты точки
+					}
+			});
+			var myPlacemark = new ymaps.Placemark([55.7531564, 37.6444161], {}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/pin.svg',
+					iconImageSize: [30, 42],
+					iconImageOffset: [-3, -42]
+			});
+			myMap.geoObjects.add(myPlacemark);
+	}
 });
