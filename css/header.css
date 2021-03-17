@@ -152,17 +152,6 @@
 }
 
 @media(min-width: 1650px) {
-	.link-reset {
-		cursor: pointer;
-	}
-
-	.container {
-		width: 1600px;
-		margin: 0 auto;
-		padding: 0;
-	}
-
-	/* header */
 
 	.header {
 		position: relative;
