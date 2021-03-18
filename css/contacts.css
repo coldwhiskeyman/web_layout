@@ -201,8 +201,25 @@
 		margin: 0;
 	}
 
+	.social-list__item {
+		border-radius: 50%;
+	}
+
 	.social-list__item:not(:last-child) {
 		margin-right: 30px;
+	}
+
+	.contacts .social-list__item:hover {
+		box-shadow: 0 0 20px 0 rgba(157, 92, 208, 0.7);
+	}
+
+	.footer .social-list__item:hover {
+		box-shadow: 0 0 20px 0 var(--white);
+	}
+
+	.contacts .social-list__item:active,
+	.footer .social-list__item:active {
+		box-shadow: 0 0 0 2px var(--purple);
 	}
 
 	.social-list__link {
