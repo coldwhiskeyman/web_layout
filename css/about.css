@@ -35,7 +35,7 @@
 	}
 }
 
-@media(min-width: 1650px) {
+@media(min-width: 1200px) {
 	.about__heading {
 		margin-bottom: 21px;
 		margin-left: -3px;
@@ -45,4 +45,8 @@
 		max-width: 1080px;
 		margin-left: -1px;
 	}
+}
+
+@media(min-width: 1650px) {
+
 }
