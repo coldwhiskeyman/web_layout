@@ -134,6 +134,17 @@ $(function() {
 
 	$('.selectric').selectric({ disableOnMobile: false, nativeOnMobile: false });
 
+	$('.gallery__slide').on('click', function() {
+		console.log(this)
+		imgName = $(this).find('.gallery__img').attr('src')
+		modal = $('.gallery__modal')
+		modal.find('.gallery__img-big').attr('src', imgName);
+		showModal(modal);
+	});
+	$('.close-btn').on('click', function() {
+		hideModal($('.gallery__modal'));
+	});
+
 	// catalog
 
 	$(".artists-catalog").accordion({
@@ -189,28 +200,26 @@ $(function() {
 	// publications
 
 	categoriesOpened = false;
-	if ($(window).width() < 768) {
-		$('.categories-fieldset__legend').on('click', function() {
-			if (categoriesOpened) {
-				$('.categories-fieldset__checkbox').each(function() {
-					if (!$(this).find('.checkbox__input').is(':checked')) {
-						$(this).removeClass('active');
-					};
-				});
-				categoriesOpened = false;
-			} else {
-				$('.categories-fieldset__checkbox').each(function() {
-					$(this).addClass('active');
-				});
-				categoriesOpened = true;
-			};
-		});
-		$('.categories-fieldset__checkbox').on('click', function() {
-			if (!categoriesOpened) {
-				$(this).removeClass('active');
-			};
-		});
-	};
+	$('.categories-fieldset__legend').on('click', function() {
+		if (categoriesOpened) {
+			$('.categories-fieldset__checkbox').each(function() {
+				if (!$(this).find('.checkbox__input').is(':checked')) {
+					$(this).removeClass('active');
+				};
+			});
+			categoriesOpened = false;
+		} else {
+			$('.categories-fieldset__checkbox').each(function() {
+				$(this).addClass('active');
+			});
+			categoriesOpened = true;
+		};
+	});
+	$('.categories-fieldset__checkbox').on('click', function() {
+		if (!categoriesOpened) {
+			$(this).removeClass('active');
+		};
+	});
 
 
 	const publicationsBreakpoint = window.matchMedia( '(max-width:767px)' );
