@@ -13,6 +13,25 @@ $(function() {
 		}, 500);
 	};
 
+	$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+		if ($(event.target).hasClass('artists-catalog__link')) {
+			$('#artist-details').removeAttr('id')
+			elem = $(this).parent().parent().parent().parent().parent().find('.artist-details')
+			elem.attr('id', 'artist-details')
+
+			target = '#artist-details'
+		} else if ($(event.target).hasClass('flags__button')) {
+			event.preventDefault();
+		} else {
+			target = $.attr(this, 'href')
+		}
+
+    $('html, body').animate({
+        scrollTop: $(target).offset().top
+    }, 500);
+	});
+
 	// burger menu
 
 	$('.burger').on('click', function() {

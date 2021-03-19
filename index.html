@@ -36,13 +36,13 @@
 				<button class="search button-reset" aria-label="Поиск по сайту"></button>
 				<nav class="header-nav">
 					<ul class="menu-list ul-reset">
-						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#">О нас</a></li>
-						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#">Галерея</a></li>
-						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#">Каталог</a></li>
-						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#">События</a></li>
-						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#">Издания</a></li>
-						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#">Проекты</a></li>
-						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#">Контакты</a></li>
+						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#about">О нас</a></li>
+						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#gallery">Галерея</a></li>
+						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#catalog">Каталог</a></li>
+						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#events">События</a></li>
+						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#publications">Издания</a></li>
+						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#projects">Проекты</a></li>
+						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#contacts">Контакты</a></li>
 					</ul>
 					<button class="login link-reset selectable">Войти</button>
 				</nav>
@@ -132,7 +132,7 @@
 			</div>
 		</section>
 
-		<section class="about">
+		<section class="about" id="about">
 			<div class="container">
 				<h2 class="heading about__heading text-block-reset">О нас</h2>
 				<p class="paragraph about__paragraph text-block-reset">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо
@@ -143,7 +143,7 @@
 			</div>
 		</section>
 
-		<section class="gallery">
+		<section class="gallery" id="gallery">
 			<div class="container gallery__container">
 				<h2 class="heading gallery__heading text-block-reset">Галерея</h2>
 				<form class="gallery-form">
@@ -290,8 +290,8 @@
 						</div>
 						<div>
 							<ul class="artists-catalog__list ul-reset">
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="monet">Клод Моне</a></li>
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="manet">Эдуард Мане</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="monet">Клод Моне</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="manet">Эдуард Мане</a></li>
 							</ul>
 						</div>
 						<div class="artists-catalog__subsection">
@@ -300,8 +300,8 @@
 						</div>
 						<div>
 							<ul class="artists-catalog__list ul-reset">
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="duchamp">Марсель Дюшан</a></li>
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="picasso">Пабло Пикассо</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="duchamp">Марсель Дюшан</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="picasso">Пабло Пикассо</a></li>
 							</ul>
 						</div>
 					</div>
@@ -325,7 +325,7 @@
 						</div>
 						<div>
 							<ul class="artists-catalog__list ul-reset">
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="durer">Альбрехт Дюрер</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="durer">Альбрехт Дюрер</a></li>
 							</ul>
 						</div>
 					</div>
@@ -349,12 +349,12 @@
 						</div>
 						<div>
 							<ul class="artists-catalog__list ul-reset">
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="diBindo">Бенедетто ди Биндо</a></li>
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="bergognone">Бергоньоне, Амброджо</a></li>
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="verrocchio">Андреа Верроккьо</a></li>
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset selected" href="#catalog" id="girlandaio">Доменико Гирландайо</a></li>
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="giorgione">Джорджоне</a></li>
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="parentino">Парентино, Бернардо</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="diBindo">Бенедетто ди Биндо</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="bergognone">Бергоньоне, Амброджо</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="verrocchio">Андреа Верроккьо</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset selected" href="#artist-details" id="girlandaio">Доменико Гирландайо</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="giorgione">Джорджоне</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="parentino">Парентино, Бернардо</a></li>
 							</ul>
 						</div>
 						<div class="artists-catalog__subsection">
@@ -363,9 +363,9 @@
 						</div>
 						<div>
 							<ul class="artists-catalog__list ul-reset">
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="caravaggio">Караваджо</a></li>
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="michelangelo">Микеланджело</a></li>
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="raffael">Рафаэль</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="caravaggio">Караваджо</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="michelangelo">Микеланджело</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="raffael">Рафаэль</a></li>
 							</ul>
 						</div>
 						<div class="artists-catalog__subsection">
@@ -374,9 +374,9 @@
 						</div>
 						<div>
 							<ul class="artists-catalog__list ul-reset">
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="carracci">Аннибале Карраччи</a></li>
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="fetti">Доменико Фетти</a></li>
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="reni">Гвидо Рени</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="carracci">Аннибале Карраччи</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="fetti">Доменико Фетти</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="reni">Гвидо Рени</a></li>
 							</ul>
 						</div>
 						<div class="artists-catalog__subsection">
@@ -385,9 +385,9 @@
 						</div>
 						<div>
 							<ul class="artists-catalog__list ul-reset">
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="gabbiani">Антон Доменико Габбиани</a></li>
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="maratta">Карло Маратта</a></li>
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="pellegrini">Джованни Антонио Пеллегрини</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="gabbiani">Антон Доменико Габбиани</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="maratta">Карло Маратта</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="pellegrini">Джованни Антонио Пеллегрини</a></li>
 							</ul>
 						</div>
 						<div class="artists-catalog__subsection">
@@ -396,9 +396,9 @@
 						</div>
 						<div>
 							<ul class="artists-catalog__list ul-reset">
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="abbati">Джузеппе Аббати</a></li>
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="induno">Джироламо Индуно</a></li>
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="filippini">Франческо Филиппини</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="abbati">Джузеппе Аббати</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="induno">Джироламо Индуно</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="filippini">Франческо Филиппини</a></li>
 							</ul>
 						</div>
 						<div class="artists-catalog__subsection">
@@ -489,8 +489,8 @@
 						</div>
 						<div>
 							<ul class="artists-catalog__list ul-reset">
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="aivazovsky">Иван Айвазовский</a></li>
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="brullov">Карл Брюллов</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="aivazovsky">Иван Айвазовский</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="brullov">Карл Брюллов</a></li>
 							</ul>
 						</div>
 						<div class="artists-catalog__subsection">
@@ -499,8 +499,8 @@
 						</div>
 						<div>
 							<ul class="artists-catalog__list ul-reset">
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="kandinsky">Василий Кандинский</a></li>
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="malevich">Казимир Малевич</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="kandinsky">Василий Кандинский</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="malevich">Казимир Малевич</a></li>
 							</ul>
 						</div>
 					</div>
@@ -524,7 +524,7 @@
 						</div>
 						<div>
 							<ul class="artists-catalog__list ul-reset">
-								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#catalog" id="magritte">Рене Магритт</a></li>
+								<li class="artists-catalog__item"><a class="artists-catalog__link selectable link-reset" href="#artist-details" id="magritte">Рене Магритт</a></li>
 							</ul>
 						</div>
 					</div>
@@ -543,7 +543,7 @@
 			</div>
 		</section>
 
-		<section class="events">
+		<section class="events" id="events">
 			<div class="container">
 				<h2 class="heading events__heading text-block-reset">События</h2>
 				<div class="swiper-container events-swiper">
@@ -629,7 +629,7 @@
 			</div>
 		</section>
 
-		<section class="publications">
+		<section class="publications" id="publications">
 			<div class="container">
 				<h2 class="heading publications__heading text-block-reset">Издания</h2>
 				<form class="publications-form" action="#">
@@ -809,7 +809,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="projects">
+		<section class="projects" id="projects">
 			<div class="container">
 				<h2 class="heading projects__heading text-block-reset">Проекты</h2>
 				<p class="paragraph projects__paragraph text-block-reset">Предварительные выводы: постоянное информационно- пропагандистское обеспечение нашей деятельности
@@ -858,7 +858,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="contacts">
+		<section class="contacts" id="contacts">
 			<div class="container contacts__container">
 				<h2 class="heading contacts__heading text-block-reset">Контакты</h2>
 				<div class="contacts__block">
