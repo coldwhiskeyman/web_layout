@@ -22,7 +22,7 @@ $(function() {
 
 			target = '#artist-details'
 		} else if ($(event.target).hasClass('flags__button')) {
-			event.preventDefault();
+			target = '#catalog'
 		} else {
 			target = $.attr(this, 'href')
 		}
@@ -329,4 +329,25 @@ $(function() {
 			});
 			myMap.geoObjects.add(myPlacemark);
 	}
+
+	let name;
+	let phone;
+	$('#name').on('change', function () {
+    name = $('#name').val();
+  });
+  $('#phone').on('change', function () {
+    phone = $('#phone').val();
+  });
+  $('.contacts-form').submit(function (event) {
+    event.preventDefault();
+    Email.send({
+      SecureToken: '195e378a-4f9e-42ad-8158-8485af1e67d0',
+      To : 'eldiablo5783@gmail.com',
+      From : 'eldiablo5783@gmail.com',
+      Subject : "Contact me",
+      Body : "Name: " + name + " Phone: " + phone
+    }).then(
+        message => alert(message)
+    );
+  });
 });

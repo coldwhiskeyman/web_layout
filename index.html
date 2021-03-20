@@ -33,7 +33,7 @@
 					<span class="burger__element"></span>
 				</button>
 				<img class="logo img-reset" src="img/logo.svg" alt="Blanchard. Художественная галерея">
-				<button class="search button-reset" aria-label="Поиск по сайту"></button>
+				<button class="search link-reset" aria-label="Поиск по сайту"></button>
 				<nav class="header-nav">
 					<ul class="menu-list ul-reset">
 						<li class="menu-list__item"><a class="menu-list__link link-reset selectable" href="#about">О нас</a></li>
@@ -866,8 +866,8 @@
 					<p class="contacts__subtext text-block-reset">Покровский бульвар, дом 24, строение 3</p>
 					<h3 class="contacts__form-heading text-block-reset">Заказать обратный звонок</h3>
 					<form class="contacts-form" action="#">
-						<input class="contacts-form__input" type="text" placeholder="Имя*">
-						<input class="contacts-form__input" type="tel" placeholder="Телефон*">
+						<input class="contacts-form__input link-reset" type="text" placeholder="Имя*" id="name">
+						<input class="contacts-form__input link-reset" type="tel" placeholder="Телефон*" id="phone">
 						<input class="contacts-form__button selectable link-reset" type="submit" value="Заказать">
 					</form>
 					<h3 class="contacts__form-heading text-block-reset">Связаться в один клик</h3>
@@ -894,6 +894,7 @@
 	<script src="js/focus-visible.min.js"></script>
 	<script src="js/jquery.selectric.min.js"></script>
 	<script src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/catalog_db.js"></script>
 </body>
