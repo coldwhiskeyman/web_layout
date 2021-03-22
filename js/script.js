@@ -34,7 +34,7 @@ $(function() {
 
 	// burger menu
 
-	$('.burger').on('click', function() {
+	$('.burger, .menu-close-btn').on('click', function() {
 		$('.header-nav').slideToggle();
 	});
 
