@@ -84,7 +84,7 @@ $(function() {
 	});
 	$('.search-close-btn').on('click', function(event) {
 		event.preventDefault();
-		let search = $('.upper-header .search-form');
+		let search = $(this).parent();
 		search.slideUp();
 		search.remove();
 	});
@@ -168,7 +168,6 @@ $(function() {
 	$('.selectric').selectric({ disableOnMobile: false, nativeOnMobile: false });
 
 	$('.gallery__slide').on('click', function() {
-		console.log('yo')
 		imgName = $(this).find('.gallery__img').attr('src')
 		modal = $('.gallery-modal')
 		modal.find('.gallery-modal__img').attr('src', imgName);
