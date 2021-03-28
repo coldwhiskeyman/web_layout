@@ -168,14 +168,14 @@ $(function() {
 	$('.selectric').selectric({ disableOnMobile: false, nativeOnMobile: false });
 
 	$('.gallery__slide').on('click', function() {
-		console.log(this)
+		console.log('yo')
 		imgName = $(this).find('.gallery__img').attr('src')
-		modal = $('.gallery__modal')
-		modal.find('.gallery__img-big').attr('src', imgName);
+		modal = $('.gallery-modal')
+		modal.find('.gallery-modal__img').attr('src', imgName);
 		showModal(modal);
 	});
 	$('.close-btn').on('click', function() {
-		hideModal($('.gallery__modal'));
+		hideModal($('.gallery-modal'));
 	});
 
 	// catalog
