@@ -75,6 +75,20 @@ $(function() {
 		};
 	});
 
+	// mobile search
+
+	$('.search').on('click', function() {
+		let search = $('.search-form').clone();
+		search.appendTo('.upper-header');
+		search.slideDown();
+	});
+	$('.search-close-btn').on('click', function(event) {
+		event.preventDefault();
+		let search = $('.upper-header .search-form');
+		search.slideUp();
+		search.remove();
+	});
+
 	// info section background
 
 	mobileBgs = [
