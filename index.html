@@ -22,7 +22,7 @@
 	<link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-600.woff2" as="font" type="font/woff2">
 	<link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font" type="font/woff2">
 	<script src="js/swiper-bundle.min.js"></script>
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=111&lang=ru_RU"></script>
 </head>
 <body class="body">
 	<header class="header">
@@ -117,9 +117,11 @@
 					</li>
 				</ul>
 				<form class="search-form">
-					<button class="search-form__btn link-reset" type="submit" aria-label="Поиск по сайту"></button>
-					<input class="search-form__input link-reset" type="search" placeholder="Поиск по сайту">
-					<button class="search-close-btn selectable link-reset" aria-label="Закрыть"></button>
+					<div class="search-form__container">
+						<button class="search-form__btn link-reset" type="submit" aria-label="Поиск по сайту"></button>
+						<input class="search-form__input link-reset" type="search" placeholder="Поиск по сайту">
+						<button class="search-close-btn selectable link-reset" type="button" aria-label="Закрыть"></button>
+					</div>
 				</form>
 			</div>
 		</div>

@@ -82,11 +82,12 @@ $(function() {
 		search.appendTo('.upper-header');
 		search.slideDown();
 	});
-	$('.search-close-btn').on('click', function(event) {
-		event.preventDefault();
+	$(document).on('click', '.search-close-btn', function(event) {
 		let search = $(this).parent();
 		search.slideUp();
-		search.remove();
+		setTimeout(function(){
+			search.remove();
+		}, 500);
 	});
 
 	// info section background
@@ -172,9 +173,11 @@ $(function() {
 		modal = $('.gallery-modal')
 		modal.find('.gallery-modal__img').attr('src', imgName);
 		showModal(modal);
+		$('.body').addClass('modal-open');
 	});
 	$('.close-btn').on('click', function() {
-		hideModal($('.gallery-modal'));
+		hideModal($('.gallery-modal'))
+		$('.body').removeClass('modal-open');
 	});
 
 	// catalog

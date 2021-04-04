@@ -30,6 +30,11 @@
 	background-color: var(--white);
 }
 
+body.modal-open {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
 .text-block-reset {
 	margin: 0;
 }
