@@ -83,7 +83,7 @@ $(function() {
 		search.slideDown();
 	});
 	$(document).on('click', '.search-close-btn', function(event) {
-		let search = $(this).parent();
+		let search = $(this).parent().parent();
 		search.slideUp();
 		setTimeout(function(){
 			search.remove();
